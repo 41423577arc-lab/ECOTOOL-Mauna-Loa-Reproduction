@@ -1,0 +1,26 @@
+# Windows and macOS temporary files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# MATLAB editor backups and generated cache
+*.asv
+*.m~
+*.autosave
+*.slxc
+slprj/
+
+# Logs
+*.log
+
+# Local environment settings and secrets
+.env
+.env.*
+!.env.example
+local_config.m
+secrets.*
+*.pem
+*.key
+
+# Do not commit a full third-party ECOTOOL copy
+third_party/ECOTOOL/
