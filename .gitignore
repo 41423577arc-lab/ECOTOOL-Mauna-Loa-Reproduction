@@ -24,3 +24,5 @@ secrets.*
 
 # Do not commit a full third-party ECOTOOL copy
 third_party/ECOTOOL/
+
+.matlab-prefs/
