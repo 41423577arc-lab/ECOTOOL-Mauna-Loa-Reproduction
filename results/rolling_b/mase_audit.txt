@@ -1,0 +1,1 @@
+PASS: 220 training scales and target indices; 48 MASE metrics independently recomputed.
