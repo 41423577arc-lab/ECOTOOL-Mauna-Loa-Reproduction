@@ -1,0 +1,6 @@
+PASS: B vs C common raw actuals, origins, targets; B 10560 predictions, 48 metrics independently recomputed in MATLAB.
+B source commit: 9225da80af22d5bbb2ddf6d727cc9db51a82968c
+Tolerance: 1.0e-09
+C audit: audit.txt (220 rounds). No B code or result files modified.
+Comparison contains Airline, AutoARIMA, UC, AR12.
+Ariel f8dabd8778ac9f277cbdd99cd7cfd9f94e513cf6 excluded: A6 uses a fixed 480-month sliding window and fixed lambda=0.2461; its summary is cumulative over horizons. B/C use expanding windows.
