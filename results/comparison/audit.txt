@@ -1,0 +1,81 @@
+PASS：六模型统一协议与独立指标核验
+时间：2026-11-17 09:47:14
+容差：指标与数值1e-9；Box-Cox参数1e-8；独立AR递推1e-7 ppm。
+PASS：原始CO2为723个有限正数
+PASS：31680条预测、144行逐步长指标、48行论文对照
+PASS：恰好六个规定模型
+PASS：预测组合唯一
+PASS：两类指标表的键唯一
+PASS：轮次与步长范围正确
+PASS：预测有限且处于200至600 ppm
+PASS：所有模型的预测起点、目标月份与原始索引一致
+PASS：真实值逐条对应原始CO2
+PASS：每条MASE分母仅由当前扩展训练集计算
+PASS：三方检查点数据与原始数据完全一致
+PASS：三方初始训练480月、末轮699月
+PASS：全部模型检查点均完成220轮
+PASS：三方检查点训练期分母一致
+PASS：A、Airline、UC的Box-Cox参数经训练期目标函数重算一致
+PASS：Airline具有220乘24完整覆盖
+PASS：Airline与来源检查点预测逐值一致
+PASS：Airline独立重算全部24步sMAPE和MASE
+Airline第24步：平均有符号误差-0.743802397 ppm；MAE 0.971525526 ppm。
+PASS：Airline论文对照的8种期限完整
+PASS：Airline逐步与累计口径分别从预测明细重算一致
+PASS：AutoARIMA具有220乘24完整覆盖
+PASS：AutoARIMA与来源检查点预测逐值一致
+PASS：AutoARIMA共用相同真实值、月份、scale和测试范围
+PASS：AutoARIMA独立重算全部24步sMAPE和MASE
+AutoARIMA第24步：平均有符号误差-0.250961584 ppm；MAE 0.719955807 ppm。
+PASS：AutoARIMA论文对照的8种期限完整
+PASS：AutoARIMA逐步与累计口径分别从预测明细重算一致
+PASS：ETS具有220乘24完整覆盖
+PASS：ETS与来源检查点预测逐值一致
+PASS：ETS共用相同真实值、月份、scale和测试范围
+PASS：ETS独立重算全部24步sMAPE和MASE
+ETS第24步：平均有符号误差-0.843815787 ppm；MAE 0.963223686 ppm。
+PASS：ETS论文对照的8种期限完整
+PASS：ETS逐步与累计口径分别从预测明细重算一致
+PASS：SeasonalNaive具有220乘24完整覆盖
+PASS：SeasonalNaive与来源检查点预测逐值一致
+PASS：SeasonalNaive共用相同真实值、月份、scale和测试范围
+PASS：SeasonalNaive独立重算全部24步sMAPE和MASE
+SeasonalNaive第24步：平均有符号误差-4.203136364 ppm；MAE 4.203136364 ppm。
+PASS：SeasonalNaive论文对照的8种期限完整
+PASS：SeasonalNaive逐步与累计口径分别从预测明细重算一致
+PASS：UC具有220乘24完整覆盖
+PASS：UC与来源检查点预测逐值一致
+PASS：UC共用相同真实值、月份、scale和测试范围
+PASS：UC独立重算全部24步sMAPE和MASE
+UC第24步：平均有符号误差-0.367011301 ppm；MAE 1.081437075 ppm。
+PASS：UC论文对照的8种期限完整
+PASS：UC逐步与累计口径分别从预测明细重算一致
+PASS：AR12具有220乘24完整覆盖
+PASS：AR12与来源检查点预测逐值一致
+PASS：AR12共用相同真实值、月份、scale和测试范围
+PASS：AR12独立重算全部24步sMAPE和MASE
+AR12第24步：平均有符号误差0.057393317 ppm；MAE 0.584470810 ppm。
+PASS：AR12论文对照的8种期限完整
+PASS：AR12逐步与累计口径分别从预测明细重算一致
+PASS：原B/C预测CSV保持原数值
+PASS：原B/C逐步长指标经新程序重算一致
+PASS：A逆Box-Cox定义域有效
+PASS：ETS与季节朴素逆变换为原始ppm
+PASS：季节朴素等于训练期末12个月重复，不代入未来真实值
+PASS：UC原有逆变换逐轮核查
+PASS：独立AR12递推不使用测试真实值
+PASS：固定480月分母仅作为独立的论文诊断列
+PASS：季节朴素累计sMAPE及固定480月分母诊断均与论文三位小数吻合
+论文一致性误差：累计sMAPE最大0.000480527；固定480月诊断MASE最大0.000420297。
+PASS：AR12未冒充论文自动AR模型
+PASS：论文式(8)(9)的累计口径已明确标注
+来源：Ariel f8dabd8778ac9f277cbdd99cd7cfd9f94e513cf6（原实验不混用，已在C分支独立适配）。
+本机MATLAB：26.1.0.3346908 (R2026a) Update 5；ECOTOOL为已安装1.0版；ETS/Naive入口与后端指纹保存在a_checkpoint.mat。
+B 9225da80af22d5bbb2ddf6d727cc9db51a82968c；C既有成果1a260c5；原始B/C文件未重估、未覆盖。
+协议：训练CO2(1:479+r)，测试CO2(480+r:503+r)，220轮，各24步；原始ppm评价。
+代码审查：A/B/C入口仅向模型传当前训练集；AutoARIMA内部处理Box-Cox并返回ppm，不重复逆变换。
+统计口径：论文第9页式(8)(9)明确对前1至h步取平均；Table 4的1年/2年按h=12/24累计解读。
+推断界限：朴素法诊断支持论文采用固定480月MASE分母，但不能据此证明其他模型的完整窗口、lambda与估计配置。
+范围：PASS验证已保存数据、训练边界与计算一致性，不证明加密后端的优化收敛、统计显著性或论文数值完全复现。
+PASS：A完成后再次运行，预测、完成标记及耗时不变，未重新估计。
+PASS：临时副本中的重复键、错误训练期scale、错误MASE指标均按预期原因被拒绝；临时文件已清理。
