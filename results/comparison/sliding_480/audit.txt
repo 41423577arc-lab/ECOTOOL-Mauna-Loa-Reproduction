@@ -1,0 +1,17 @@
+PASS：220轮独立核验
+时间：2026-11-17 14:24:22
+MATLAB：26.1.0.3346908 (R2026a) Update 5
+lambda来源：首轮训练-0.044042968750；单次25:504为0.246093750000；照A主实验存在前视风险，补充实验单独保存。
+Airline实际估计表：Estimation method: EXACT MAXIMUM LIKELIHOOD
+Airline：5280条；480月边界、日期、真实值、ppm、参数、逆变换和24步误差全部通过。
+AutoARIMA实际估计表：Estimation method: CONDITIONAL SUM OF SQUARES
+AutoARIMA：5280条；480月边界、日期、真实值、ppm、参数、逆变换和24步误差全部通过。
+UC实际估计表：Estimation method: CONDITIONAL SUM OF SQUARES
+UC：5280条；480月边界、日期、真实值、ppm、参数、逆变换和24步误差全部通过。
+AR12：5280条；480月边界、日期、真实值、ppm、参数、逆变换和24步误差全部通过。
+first_train_lambda_Airline实际估计表：Estimation method: EXACT MAXIMUM LIKELIHOOD
+first_train_lambda_Airline：5280条；480月边界、日期、真实值、ppm、参数、逆变换和24步误差全部通过。
+first_train_lambda_UC实际估计表：Estimation method: CONDITIONAL SUM OF SQUARES
+first_train_lambda_UC：5280条；480月边界、日期、真实值、ppm、参数、逆变换和24步误差全部通过。
+主实验21120条、补充10560条；112行协议与论文比较、原A误差矩阵、年度累计口径及8行MASE分解全部通过。
+核验范围：所有保存模型输入均只使用当轮480月；照A的外部lambda有前视风险已标明。没有检查加密后端内部算法或证明优化收敛。
