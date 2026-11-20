@@ -1,0 +1,5 @@
+Target,Model,UnstableFits,Failures,LLT_WinsAgainstRW
+总支付,RW,0,0,6
+总支付,LLT,10,0,6
+常规支付,RW,0,0,9
+常规支付,LLT,10,0,9

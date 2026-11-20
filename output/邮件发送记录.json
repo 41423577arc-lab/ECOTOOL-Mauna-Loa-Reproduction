@@ -1,0 +1,13 @@
+{
+  "status": "sent",
+  "verified": true,
+  "verification": "Gmail发送接口成功，并重新读取邮件确认SENT标签、收件人、主题及附件文件名和大小；不代表收件方已阅读。",
+  "sent_at_china": "2026-11-19 13:21:32 +08:00",
+  "sender": "Monica <41423577arc@gmail.com>",
+  "to": "3211049949@qq.com",
+  "subject": "个人支出时间序列分析｜UC模型阶段结果",
+  "message_id": "1a1f240c5538b829",
+  "thread_id": "1a1f24092471406a",
+  "attachment_filename": "个人支出时间序列分析_UC阶段结果.zip",
+  "attachment_bytes": 4536974
+}
