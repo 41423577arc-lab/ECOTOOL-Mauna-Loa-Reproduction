@@ -1,0 +1,67 @@
+{
+  "baseline_directory": "../个人支出时间序列分析_整理前备份_20261123",
+  "original_source_sha256": {
+    "自然周分析\\step01_data_preparation.m": "5de067b633648ded914f3f5422456a5869a5f96825eef59b6749d87e8e5709ae",
+    "自然周分析\\step02_stationarity_test.m": "36ad9aafca91db3ebd1ad0968b4a2fb351eeff2e3d418cae08cdaed2813eccf6",
+    "自然周分析\\step03_UC_model.m": "eb9a5badedbbed62f2576317c3a16830acc9d915778ac0221586df5551617a0d",
+    "自然周分析\\step04_UC_diagnostics.m": "1e9c13c9d49be7d6aa2f52764a2e1fef63a6aeaf87d9d00c55cc2b68d5f72286",
+    "completePeriodForecast.m": "d0ffb995c62512cf901307670e2c81d001395376f977f3b4a728611be1f9f397",
+    "exportFigureByTitle.m": "15ca28ad3ee15507cf3da1b8b8420121d2a0c03824dbc4b570a2978acc79fc50"
+  },
+  "input_sha256": {
+    "cyx_个人总支付_自然周.xlsx": "67898a6649d67155c798e80c64c3e42ac780083464f408ca27100f25d942c1d8",
+    "tg_个人总支付_自然周.xlsx": "36cbde2b68b3695e41d1b3f86482c0b8d2c0e379145528c2e7600c4d57cd5176",
+    "yyl_个人总支付_自然周.xlsx": "6bf567f05d5d36341517b9c301b09d750e4dd8f6e74a3d2703d3b6c55f1ecad8"
+  },
+  "changes": [
+    "仅保留总支付，RW/LLT及基准算法、训练划分、诊断滞后、选模规则沿用原自然周流程",
+    "新Excel工作表为UC数据，读取原生Excel日期",
+    "输出路径改为output/人员，原始备份只读",
+    "关闭原流程缓存，三人均重新估计；不使用旧估计替代新结果",
+    "将Excel日期存储改为数值日期及yyyy-mm-dd格式，修正MATLAB对ISO日期单元格的兼容性误读；112个日期及金额不变",
+    "图形按固定标题覆盖本次结果目录，避免重新运行产生重复版本；图表算法不变",
+    "稳定性日志空白字段按缺失文本统一后比较；记录旧日志60条索引异常与新日志0条的差异，不影响已复现的预测数值"
+  ],
+  "settings": {
+    "train_n": 108,
+    "rolling_initial": 78,
+    "rolling_n": 30,
+    "test_n": 4,
+    "alpha": 0.05,
+    "residual_lags": [
+      3,
+      6
+    ]
+  },
+  "raw_data_sha256": {
+    "cyx_个人总支付_自然周.xlsx": "0552aee4f8e56024a89603dce227f5f1fdd69f7f6542a9514625fbee830980de",
+    "C_个人总支付_自然周(1).csv": "42918c8b5c825078cd397b4b5c6885e16e4bb63a49be82f14f90c06766411196",
+    "tg_个人总支付_自然周.xlsx": "b64ec7553d0cc7f061a97e3a01e07ba091d85336fa368cbf8f38ef5c96f4f349",
+    "yyl_个人总支付_自然周.xlsx": "21084d08fc7641a7adcc92359dd2832a6d3d884990263a5396df37aad9621308"
+  },
+  "current_code_sha256": {
+    "run_all_uc.m": "80c449d088cf1b87f0231be7aa829310cb9c6925eb83ac216438af6cd2182c44",
+    "output\\流程代码\\build_uc_docx.py": "6b13463bdcc99a2b28f6ab72a35b8112f739d8fedc4872533db1699edc122377",
+    "output\\流程代码\\compare_old_uc.m": "5eca0f45ecbd7234cb34ca3e57b37544581905a80517ce0af40f8c747847a3e0",
+    "output\\流程代码\\completePeriodForecast.m": "e97fa6edc0731e2f3817164f5c180e030c717be9cf80719587b11c70b3156a15",
+    "output\\流程代码\\configure_ecotool.m": "a8e122a9232dc53354a91bf9a5c559d036434df929be9c402a696b8e26ec2289",
+    "output\\流程代码\\exportFigureByTitle.m": "467a81656948cb531f989eb9ab3750e8fbb61168102ac31340625ba9bca5062e",
+    "output\\流程代码\\prepare_report_results.m": "add658edc86937d05b537d9c529b67c66d8b74a08038be4e67c9fefc631e6111",
+    "output\\流程代码\\run_uc_person.m": "12a098351922b7ca0d7a68f9273473c75a4c27219e88c35d1c4a281c1e8759cc",
+    "output\\流程代码\\step01_data_preparation.m": "7f75b167df9f15c176470dd1f34aa54bbffe6ec88503eeca721c2dd985ca1df6",
+    "output\\流程代码\\step02_stationarity_test.m": "e2689ad6e9a8f846944c63ff8bfc8ad9bebb0c1aa778d79571e0d96f14c5d24e",
+    "output\\流程代码\\step03_UC_model.m": "a60e56b16bc6d2aa2c96476da0a84594b2fa11ec0da3b47d00426a7066596b58",
+    "output\\流程代码\\step04_UC_diagnostics.m": "f1134a7fa805925a94f61dce7f1b7e5f4fe126b33c03e498894def6cabb521aa",
+    "output\\流程代码\\verify_report.py": "5a1e1b6bb07544446175565e92b850469c8701b4d898f703a51128180b83c119",
+    "output\\流程代码\\verify_results.py": "efd664a4313ca83aa09ae6434d089878db45791afe1acd355e7be78d767f14c6",
+    "output\\流程代码\\write_uc_report.m": "7dabff5ab61d3895a4810ef13bcd8faef120404e545a0389e7ef3e1fcacb07be"
+  },
+  "current_output_directory": "output",
+  "report_reference": {
+    "path": "三位成员周消费_ARIMA与基准预测报告.docx",
+    "sha256": "f94352d5d2b660f53763ec2ef887e977c616e17db8c0167e76e44f712a606cd8",
+    "usage": "仅借鉴结构和版式，不采用参考文件的数据身份或ARIMA结果"
+  },
+  "report_supplement": "同原点补充LLT及两个基准四周展示，LLT参数与原108周估计核对，不改变选模",
+  "publication_note": "公开仓库保留周度建模输入、分析结果和报告；逐笔原始账单及本机日志不上传。"
+}

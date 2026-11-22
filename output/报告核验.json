@@ -1,0 +1,22 @@
+{
+  "supplementary_metric_rows_checked": 24,
+  "supplementary_fixed_forecast_rows": 48,
+  "mermaid_sequence_count": 1,
+  "mermaid_model_flow_count": 4,
+  "shared_module_colors_consistent": true,
+  "output_renamed": true,
+  "reference_layout_and_style_parts_preserved": {
+    "word/styles.xml": true,
+    "word/numbering.xml": true,
+    "word/theme/theme1.xml": true
+  },
+  "document_figures": 10,
+  "all_checks_passed": true,
+  "word_pages": 12,
+  "all_pages_visually_reviewed": true,
+  "final_render_matches_reviewed_render": true,
+  "reference_unchanged": true,
+  "diagram_format": "Mermaid",
+  "diagram_structure_and_color_contract_checked": true,
+  "reference_template_checked_this_run": false
+}

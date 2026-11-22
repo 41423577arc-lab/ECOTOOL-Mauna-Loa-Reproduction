@@ -1,0 +1,10 @@
+Person,Baseline,ComparisonScope,NewSelectedUC,OldSelectedUC,SameSelection,NewRWPass,OldRWPass,SameRWConclusion,NewLLTPass,OldLLTPass,SameLLTConclusion
+cyx,旧yyl月度,不同人员，仅作结论参照,RW,LLT,0,1,1,1,1,1,1
+cyx,旧yyl自然周,不同人员，仅作结论参照,RW,RW,1,1,1,1,1,1,1
+cyx,旧yyl连续七天,不同人员，仅作结论参照,RW,RW,1,1,1,1,1,1,1
+tg,旧yyl月度,不同人员，仅作结论参照,RW,LLT,0,1,1,1,1,1,1
+tg,旧yyl自然周,不同人员，仅作结论参照,RW,RW,1,1,1,1,1,1,1
+tg,旧yyl连续七天,不同人员，仅作结论参照,RW,RW,1,1,1,1,1,1,1
+yyl,旧yyl月度,同人不同时间聚合，仅作结论参照,RW,LLT,0,1,1,1,1,1,1
+yyl,旧yyl自然周,同人同数据同流程，可直接复现,RW,RW,1,1,1,1,1,1,1
+yyl,旧yyl连续七天,同人不同时间聚合，仅作结论参照,RW,RW,1,1,1,1,1,1,1

@@ -1,2 +1,0 @@
-Month,Model,Forecast,Actual,Error,AbsoluteError,RelativeError,Lower95,Upper95,IntervalCoverage
-2026-10-01,LLT,5135.9720655222,3702.17,1433.8020655222,1433.8020655222,0.387286933210037,NaN,NaN,不可判定（未发布可靠区间）

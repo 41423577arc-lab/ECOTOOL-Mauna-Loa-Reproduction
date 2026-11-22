@@ -1,0 +1,51 @@
+{
+  "person_checks": [
+    {
+      "person": "cyx",
+      "rolling_rows": 120,
+      "test_rows": 4,
+      "selected_uc": "RW",
+      "independently_recomputed_metrics": "pass",
+      "failures": 0
+    },
+    {
+      "person": "tg",
+      "rolling_rows": 120,
+      "test_rows": 4,
+      "selected_uc": "RW",
+      "independently_recomputed_metrics": "pass",
+      "failures": 0
+    },
+    {
+      "person": "yyl",
+      "rolling_rows": 120,
+      "test_rows": 4,
+      "selected_uc": "RW",
+      "independently_recomputed_metrics": "pass",
+      "failures": 0
+    }
+  ],
+  "yyl_comparison_columns": 79,
+  "yyl_comparison_files": 12,
+  "yyl_core_results_reproduced": true,
+  "yyl_all_files_identical": false,
+  "yyl_recorded_differences": [
+    {
+      "File": "UC滚动估计稳定性.csv",
+      "Column": "MaxScoreSE",
+      "N": "120",
+      "MaxAbsDifference": "0",
+      "Tolerance": "1e-06",
+      "Match": "0"
+    },
+    {
+      "File": "UC滚动估计稳定性.csv",
+      "Column": "Failure",
+      "N": "120",
+      "MaxAbsDifference": "NaN",
+      "Tolerance": "NaN",
+      "Match": "0"
+    }
+  ],
+  "independent_calculations_passed": true
+}

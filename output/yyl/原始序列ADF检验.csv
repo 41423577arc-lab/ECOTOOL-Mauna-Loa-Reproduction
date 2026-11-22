@@ -1,0 +1,3 @@
+Series,Lag,Statistic,PValue,RejectUnitRoot
+个人总支付,0,-8.94959651271246,0.001,1
+个人总支付,1,-5.48745889640325,0.001,1

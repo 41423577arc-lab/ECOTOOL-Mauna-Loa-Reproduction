@@ -1,0 +1,14 @@
+# 原始逐笔支付账单仅在本机保留，公开仓库只发布周度建模输入。
+/raw_data/
+
+# 本机运行日志和编辑器临时文件。
+/output/*运行日志.txt
+/output/*/运行日志.txt
+/output/报告补充计算日志.txt
+__pycache__/
+*.py[cod]
+~$*
+*.asv
+*.tmp
+.DS_Store
+Thumbs.db
