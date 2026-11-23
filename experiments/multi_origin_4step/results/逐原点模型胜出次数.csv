@@ -1,0 +1,13 @@
+﻿Person,Group,Model,WinningOrigins
+A,原始,LLT,12
+A,原始,RW,7
+A,原始,三期移动平均,3
+A,原始,朴素,5
+B,原始,LLT,5
+B,原始,RW,6
+B,原始,三期移动平均,4
+B,原始,朴素,12
+C,原始,LLT,5
+C,原始,RW,7
+C,原始,三期移动平均,9
+C,原始,朴素,6

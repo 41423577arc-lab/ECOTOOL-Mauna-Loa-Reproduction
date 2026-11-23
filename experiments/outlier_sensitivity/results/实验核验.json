@@ -1,0 +1,40 @@
+{
+  "checks": {
+    "multi_origin_4step": {
+      "prediction_rows": 1296,
+      "test_rows": 48,
+      "metric_rows": 60,
+      "all_checks_passed": true
+    },
+    "outlier_sensitivity": {
+      "prediction_rows": 1296,
+      "test_rows": 48,
+      "metric_rows": 60,
+      "all_checks_passed": true
+    }
+  },
+  "input_sha256": {
+    "data\\A_个人总支付_自然周.xlsx": "7446eb7bdbaa83db4dcdefaeee4c094bdf511c2e03fb9bcd52c75b8d98e272af",
+    "data\\B_个人总支付_自然周.xlsx": "6cada3fb4eb53e31ab23c43eaba13f288a4fdcf8501c97c0c7da4f7c5cda8c9c",
+    "data\\C_个人总支付_自然周.xlsx": "26596b28f3ff9ddb854f4a9a0ab1bd06998ac77b3ae5bfe3f0e0845b64374527"
+  },
+  "raw_groups_match_across_experiments": true,
+  "checks_performed": [
+    "全部误差指标独立重算",
+    "所有原点阈值仅使用当时训练历史",
+    "缩尾记录逐条核验",
+    "原始组一步预测及保留四步预测复现正式结果",
+    "选模规则独立核验"
+  ],
+  "code_sha256": {
+    "experiments\\analyze_results.py": "e5a4dda11990630b1ff60e4a204dadeadac92a7ed02ae6dc84961c73f2f05d1a",
+    "experiments\\multi_origin_4step\\run_experiment.m": "6ee3dd464b6900641de39765159354613a94084648da6e1f95e1e66f8265280d",
+    "experiments\\outlier_sensitivity\\run_experiment.m": "259caf544e4a971ca6bed26bcb3982e90070197c830f54a7b3fcb281a62dde7d",
+    "experiments\\run_uc_backtests.m": "b91bf0b7950414e32672b623f743f33aa3ae7b2521c22a1ac6b07a15b46ac86d"
+  },
+  "source_sha256": {
+    "raw_data\\A_个人总支付_自然周.csv": "63547d117420fccb98e553258ab7c5f054f3b7eef8f3be3a1b8d7d572cb7a419",
+    "raw_data\\B_个人总支付_自然周.xlsx": "0552aee4f8e56024a89603dce227f5f1fdd69f7f6542a9514625fbee830980de",
+    "raw_data\\C_个人总支付_自然周.xlsx": "21084d08fc7641a7adcc92359dd2832a6d3d884990263a5396df37aad9621308"
+  }
+}
