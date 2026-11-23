@@ -1,7 +1,15 @@
 {
   "person_checks": [
     {
-      "person": "cyx",
+      "person": "A",
+      "rolling_rows": 120,
+      "test_rows": 4,
+      "selected_uc": "LLT",
+      "independently_recomputed_metrics": "pass",
+      "failures": 0
+    },
+    {
+      "person": "B",
       "rolling_rows": 120,
       "test_rows": 4,
       "selected_uc": "RW",
@@ -9,15 +17,7 @@
       "failures": 0
     },
     {
-      "person": "tg",
-      "rolling_rows": 120,
-      "test_rows": 4,
-      "selected_uc": "RW",
-      "independently_recomputed_metrics": "pass",
-      "failures": 0
-    },
-    {
-      "person": "yyl",
+      "person": "C",
       "rolling_rows": 120,
       "test_rows": 4,
       "selected_uc": "RW",
@@ -25,11 +25,12 @@
       "failures": 0
     }
   ],
-  "yyl_comparison_columns": 79,
-  "yyl_comparison_files": 12,
-  "yyl_core_results_reproduced": true,
-  "yyl_all_files_identical": false,
-  "yyl_recorded_differences": [
+  "missing_raw_sources": [],
+  "C_comparison_columns": 79,
+  "C_comparison_files": 12,
+  "C_core_results_reproduced": true,
+  "C_all_files_identical": false,
+  "C_recorded_differences": [
     {
       "File": "UC滚动估计稳定性.csv",
       "Column": "MaxScoreSE",

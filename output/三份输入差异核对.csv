@@ -1,4 +1,4 @@
 FileA,FileB,EqualWeeks,DifferentWeeks,SumAminusB
-cyx,tg,110,2,-81
-cyx,yyl,0,112,26185.47
-tg,yyl,0,112,26266.47
+A,B,0,112,-26792.11
+A,C,0,112,-606.639999999999
+B,C,0,112,26185.47

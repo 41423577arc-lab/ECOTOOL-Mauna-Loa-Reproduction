@@ -1,0 +1,11 @@
+{
+  "models": [
+    "RW4",
+    "LLT4"
+  ],
+  "rolling_forecast_rows_checked": 180,
+  "fixed_forecast_rows_checked": 24,
+  "metric_rows_checked": 12,
+  "paired_comparison_rows_checked": 12,
+  "all_checks_passed": true
+}

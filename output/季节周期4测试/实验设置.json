@@ -1,0 +1,27 @@
+{
+  "seasonal_period": 4,
+  "period_unit": "周",
+  "members": [
+    "A",
+    "B",
+    "C"
+  ],
+  "models": [
+    "RW4",
+    "LLT4"
+  ],
+  "training_n": 108,
+  "rolling_initial": 78,
+  "rolling_n": 30,
+  "test_n": 4,
+  "baseline_label": "本轮修正A后的无季节UC结果",
+  "A_total": 88167.33,
+  "mae_improved_cases": 0,
+  "rmse_improved_cases": 0,
+  "input_sha256": {
+    "A_个人总支付_自然周.xlsx": "7446eb7bdbaa83db4dcdefaeee4c094bdf511c2e03fb9bcd52c75b8d98e272af",
+    "B_个人总支付_自然周.xlsx": "6cada3fb4eb53e31ab23c43eaba13f288a4fdcf8501c97c0c7da4f7c5cda8c9c",
+    "C_个人总支付_自然周.xlsx": "26596b28f3ff9ddb854f4a9a0ab1bd06998ac77b3ae5bfe3f0e0845b64374527"
+  },
+  "experiment_source_sha256": "6c3ddb06d74efdf531e5e5861ddb213dac699ccde46f0cc4f3b404fa1f831f48"
+}

@@ -5,18 +5,23 @@
   "mermaid_model_flow_count": 4,
   "shared_module_colors_consistent": true,
   "output_renamed": true,
+  "reference_template_checked_this_run": false,
+  "document_figures": 10,
+  "all_checks_passed": true,
   "reference_layout_and_style_parts_preserved": {
     "word/styles.xml": true,
     "word/numbering.xml": true,
     "word/theme/theme1.xml": true
   },
-  "document_figures": 10,
-  "all_checks_passed": true,
-  "word_pages": 12,
+  "word_pages": 13,
   "all_pages_visually_reviewed": true,
-  "final_render_matches_reviewed_render": true,
-  "reference_unchanged": true,
-  "diagram_format": "Mermaid",
-  "diagram_structure_and_color_contract_checked": true,
-  "reference_template_checked_this_run": false
+  "members": [
+    "A",
+    "B",
+    "C"
+  ],
+  "report_sha256": "8aa75385585df96e073e95fe81c30729d371406b63ed487ef7eb13f07169a590",
+  "A_source_total": 88167.33,
+  "A_source_rows_verified": 112,
+  "A_corrected_weeks": 112
 }

@@ -5,16 +5,23 @@ if ~isfolder(figures),mkdir(figures);end
 configure_ecotool();
 models=["RW","LLT","朴素","三期移动平均"];
 colors=[0.145 0.388 0.922;0.486 0.227 0.929;0.918 0.345 0.047;0.020 0.588 0.412];
-people=["cyx","tg","yyl"];allMetrics=table;allForecasts=table;allSums=table;
+people=["A","B","C"];allMetrics=table;allForecasts=table;allSums=table;
 set(groot,'DefaultFigureVisible','off');
 for person=people
  p=fullfile(out,person);r=load(fullfile(p,'step05_rolling.mat'));e=load(fullfile(p,'step06_evaluation.mat'));
  original=load(fullfile(p,'step03_UC_models.mat'));lock=load(fullfile(p,'step06_forecast_locked.mat'));
  y=r.tr.yTrain(:);dates=r.tr.tTest(:);actual=e.evaluation.Actual(:);H=numel(dates);
- pred=nan(H,4);assert(r.selected(1)=="RW");pred(:,1)=lock.forecasts(:,1);
- m=modelUC(y,[],'LLT',H);
- assert(max(abs(m.par(:)-original.ucTotal_LLT.par(:)))<1e-8,'补充LLT参数与原全训练期估计不同');
- pred(:,2)=m.py(:);pred(:,3)=y(end);
+ pred=nan(H,4);
+ for b=1:2
+  if models(b)==r.selected(1),pred(:,b)=lock.forecasts(:,1);
+  else
+   m=modelUC(y,[],char(models(b)),H);
+   fitted=original.("ucTotal_"+models(b));
+   assert(max(abs(m.par(:)-fitted.par(:)))<1e-8,'补充模型参数与原全训练期估计不同');
+   pred(:,b)=m.py(:);
+  end
+ end
+ pred(:,3)=y(end);
  history=y;
  for h=1:H,pred(h,4)=mean(history(end-2:end));history=[history;pred(h,4)];end %#ok<AGROW>
  scale=mean(abs(diff(y)));assert(scale>0);

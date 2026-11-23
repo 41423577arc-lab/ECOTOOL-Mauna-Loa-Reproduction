@@ -5,11 +5,11 @@ if exist('modelUC','file')~=2
 end
 out=fullfile(projectRoot,'output');
 old=projectRoot+"_整理前备份_20261123";
-people=["cyx","tg","yyl"];
+people=["A","B","C"];
 summary=table; conclusion=table;
 inputDates=cell(3,1);inputValues=cell(3,1);
 oldDirs=[fullfile(old,'output'),fullfile(old,'自然周分析','output'),fullfile(old,'连续七天分析','output')];
-labels=["旧yyl月度","旧yyl自然周","旧yyl连续七天"];
+labels=["旧C月度","旧C自然周","旧C连续七天"];
 for person=people
     p=fullfile(out,person);
     r=load(fullfile(p,'step05_rolling.mat'));
@@ -35,8 +35,8 @@ for person=people
         oldRW=all(~od.RejectH0(od.Model=="总支付-RW"));
         oldLLT=all(~od.RejectH0(od.Model=="总支付-LLT"));
         relation="不同人员，仅作结论参照";
-        if person=="yyl" && j==2,relation="同人同数据同流程，可直接复现";
-        elseif person=="yyl",relation="同人不同时间聚合，仅作结论参照";end
+        if person=="C" && j==2,relation="同人同数据同流程，可直接复现";
+        elseif person=="C",relation="同人不同时间聚合，仅作结论参照";end
         conclusion=[conclusion;table(person,labels(j),relation,selected,oldSelected,selected==oldSelected, ...
             rwPass,oldRW,rwPass==oldRW,lltPass,oldLLT,lltPass==oldLLT, ...
             'VariableNames',{'Person','Baseline','ComparisonScope','NewSelectedUC','OldSelectedUC','SameSelection', ...
@@ -58,7 +58,7 @@ end
 writetable(inputDifference,fullfile(out,'三份输入差异核对.csv'),'Encoding','UTF-8');
 
 % 旧自然周输入由旧训练MAT+旧独立测试MAT拼合，避免仅凭文件名认定同数据。
-oldWeek=oldDirs(2); newWeek=fullfile(out,'yyl');
+oldWeek=oldDirs(2); newWeek=fullfile(out,'C');
 oldModel=load(fullfile(oldWeek,'step03_UC_models.mat'),'sourceSignature');
 toolboxFunctions=["modelUC","auxmodelUC","clliket"];
 sameImplementation=false(3,1);
@@ -75,10 +75,10 @@ ne=load(fullfile(newWeek,'step06_evaluation.mat'));
 otest=oe.evaluation(oe.evaluation.Target=="总支付",:);
 assert(isequal(nt.tTrain,ot.tTrain) && isequal(nt.tTest,ot.tTest));
 assert(isequal(nt.yTrain,ot.yTrain) && isequal(ne.evaluation.Actual,otest.Actual), ...
-    '新yyl与旧自然周输入并非完全一致，不可声称同数据复现。');
+    '新C与旧自然周输入并非完全一致，不可声称同数据复现。');
 inputCheck=table(["训练日期";"训练金额";"测试日期";"测试金额"],[108;108;4;4],true(4,1), ...
     'VariableNames',{'Item','N','ExactlyEqual'});
-writetable(inputCheck,fullfile(out,'yyl输入逐项核对.csv'),'Encoding','UTF-8');
+writetable(inputCheck,fullfile(out,'C输入逐项核对.csv'),'Encoding','UTF-8');
 
 files=["UC模型样本内拟合指标.csv","UC模型参数估计.csv","UC模型残差诊断汇总.csv", ...
     "UC模型残差分布统计.csv","UC模型异常残差候选.csv","UC最终模型比较.csv", ...
@@ -115,7 +115,7 @@ for file=files
             'VariableNames',{'File','Column','N','MaxAbsDifference','Tolerance','Match'})]; %#ok<AGROW>
     end
 end
-writetable(checks,fullfile(out,'yyl新旧数值逐项核对.csv'),'Encoding','UTF-8');
+writetable(checks,fullfile(out,'C新旧数值逐项核对.csv'),'Encoding','UTF-8');
 
 % 用新旧同一模型的全部滚动预测、残差检验与保留测试预测来核验结论。
 reproduced=all(checks.Match);
@@ -127,11 +127,11 @@ oldStability=oldStability(ismember(oldStability.Model,["RW","LLT"]),:);
 newStability=newStability(ismember(newStability.Model,["RW","LLT"]),:);
 oldFailures=sum(~ismissing(oldStability.Failure) & strlength(string(oldStability.Failure))>0);
 newFailures=sum(~ismissing(newStability.Failure) & strlength(string(newStability.Failure))>0);
-stabilityDifference=table(["旧yyl自然周";"新yyl自然周"],[oldFailures;newFailures], ...
+stabilityDifference=table(["旧C自然周";"新C自然周"],[oldFailures;newFailures], ...
     [sum(isnan(oldStability.MaxScoreSE));sum(isnan(newStability.MaxScoreSE))], ...
     'VariableNames',{'Run','LoggedFailureRows','MissingScoreSERows'});
 writetable(stabilityDifference,fullfile(out,'旧稳定性日志差异.csv'),'Encoding','UTF-8');
-fprintf('YYL_REPRODUCED=%d；检查%d个列项目。\n',reproduced,height(checks));
+fprintf('C_REPRODUCED=%d；检查%d个列项目。\n',reproduced,height(checks));
 disp(summary);disp(conclusion);
 save(fullfile(out,'新旧比较.mat'),'summary','conclusion','checks','inputCheck','reproduced','coreReproduced','stabilityDifference');
 write_uc_report(projectRoot);

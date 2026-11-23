@@ -15,9 +15,12 @@ checks=[]
 manifest=json.loads((out/'运行口径.json').read_text(encoding='utf-8'))
 for name,digest in manifest['input_sha256'].items():
     assert hashlib.sha256((root/'data'/name).read_bytes()).hexdigest()==digest
+missing_raw_sources=[]
 for name,digest in manifest['raw_data_sha256'].items():
-    assert hashlib.sha256((root/'raw_data'/name).read_bytes()).hexdigest()==digest
-for person in ('cyx','tg','yyl'):
+    source_path=root/'raw_data'/name
+    if source_path.exists():assert hashlib.sha256(source_path.read_bytes()).hexdigest()==digest
+    else:missing_raw_sources.append(name) # 公开仓库不包含原始账单，缺少时明确记录。
+for person in ('A','B','C'):
     p=out/person
     assert (p/'运行完成.mat').exists()
     wb=openpyxl.load_workbook(root/'data'/f'{person}_个人总支付_自然周.xlsx',data_only=True)
@@ -73,15 +76,15 @@ for person in ('cyx','tg','yyl'):
     stability=read(p/'UC滚动估计稳定性.csv')
     assert len(stability)==120 and not any(r['Failure'].strip() for r in stability)
     checks.append({'person':person,'rolling_rows':120,'test_rows':4,'selected_uc':selected,'independently_recomputed_metrics':'pass','failures':0})
-comparison=read(out/'yyl新旧数值逐项核对.csv')
+comparison=read(out/'C新旧数值逐项核对.csv')
 assert len({r['File'] for r in comparison})==12
 core_comparison=[r for r in comparison if r['File']!='UC滚动估计稳定性.csv']
 assert all(r['Match'] in ('1','true') for r in core_comparison)
 unmatched=[r for r in comparison if r['Match'] not in ('1','true')]
 assert {(r['File'],r['Column']) for r in unmatched}=={('UC滚动估计稳定性.csv','MaxScoreSE'),('UC滚动估计稳定性.csv','Failure')}
-input_checks=read(out/'yyl输入逐项核对.csv')
+input_checks=read(out/'C输入逐项核对.csv')
 assert all(r['ExactlyEqual'] in ('1','true') for r in input_checks)
-result={'person_checks':checks,'yyl_comparison_columns':len(comparison),'yyl_comparison_files':12,
-    'yyl_core_results_reproduced':True,'yyl_all_files_identical':False,'yyl_recorded_differences':unmatched,'independent_calculations_passed':True}
+result={'person_checks':checks,'missing_raw_sources':missing_raw_sources,'C_comparison_columns':len(comparison),'C_comparison_files':12,
+    'C_core_results_reproduced':True,'C_all_files_identical':False,'C_recorded_differences':unmatched,'independent_calculations_passed':True}
 (out/'独立计算核验.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(result,ensure_ascii=False,indent=2))

@@ -1,18 +1,28 @@
 {
-  "analysis_completed": [
-    "cyx",
-    "tg",
-    "yyl"
+  "members": [
+    "A",
+    "B",
+    "C"
   ],
-  "comparison_completed": true,
-  "independent_metrics_verified": true,
-  "yyl_core_results_match": true,
-  "yyl_all_output_fields_match": false,
-  "known_difference": "旧稳定性日志60条索引异常及对应缺失标准误，新日志均无此异常；主要结果一致",
-  "visual_review": "抽查cyx残差诊断及tg、yyl固定原点预测图，标签和图形可读",
+  "analysis_completed": [
+    "A",
+    "B",
+    "C"
+  ],
+  "selected_uc": {
+    "A": "LLT",
+    "B": "RW",
+    "C": "RW"
+  },
+  "A_correct_source_confirmed": true,
+  "A_total": 88167.33,
+  "A_changed_weeks": 112,
+  "C_historical_core_results_match": true,
+  "C_stability_log_difference_preserved": true,
+  "season4_rerun_completed": true,
+  "all_independent_checks_passed": true,
+  "report_pages": 13,
+  "all_report_pages_reviewed": true,
   "output_directory": "output",
-  "directory_rename_completed": true,
-  "word_report_completed": true,
-  "markdown_flow_document_completed": true,
-  "report_pages": 12
+  "original_raw_data_not_published": true
 }

@@ -13,15 +13,14 @@ for i=1:height(c.summary)
  fprintf(f,'| %s | %s | %s | %.6f | %.6f | %.6f | %.6f | %.2f |\n',s.Person,s.SelectedUC,s.LowestMAEAllModels,s.RollingMAE,s.RollingRMSE,s.TestMAE,s.ForecastSum,s.ActualSum);
 end
 fprintf(f,'\n金额单位为元，误差为每周误差；上述合计覆盖保留的四个完整周，并非完整十月金额。各人的源账单清洗口径沿用原数据，参见根目录 README。\n\n');
-fprintf(f,'输入核对还发现：cyx 与 tg 在 112 周中有 110 周金额相同，仅 2025-04-07 起始周相差 75 元、2026-09-28 起始周相差 6 元。本次按原文件名分别运行，不擅自合并或认定为独立样本；二者结果接近与其输入高度相似有关，不能据此推广到更多人员。三份输入的差异计数见三份输入差异核对.csv。\n\n');
-fprintf(f,'## 与旧 yyl 结果的关系\n\n');
+fprintf(f,'## 与旧 C 结果的关系\n\n');
 if c.reproduced
- fprintf(f,'**新 yyl 自然周结果复现成功。** 输入的 108 周训练金额与 4 周测试金额逐项完全一致；12 张结果表共 %d 个列项目全部通过核对。数值容差为 1e-6 + 1e-8 × 该列旧结果最大绝对值，非数值字段按精确匹配检查。\n\n',height(c.checks));
+ fprintf(f,'**新 C 自然周结果复现成功。** 输入的 108 周训练金额与 4 周测试金额逐项完全一致；12 张结果表共 %d 个列项目全部通过核对。数值容差为 1e-6 + 1e-8 × 该列旧结果最大绝对值，非数值字段按精确匹配检查。\n\n',height(c.checks));
 elseif c.coreReproduced
- fprintf(f,'**新 yyl 的主要分析数值和结论与旧自然周一致，但稳定性日志不同。** 输入的 108 周训练金额和 4 周测试金额完全一致；12 张结果表中除“UC滚动估计稳定性.csv”外的 11 张表，所有列均通过核对。数值容差为 1e-6 + 1e-8 × 该列旧结果最大绝对值，非数值字段按精确匹配检查。\n\n');
- fprintf(f,'旧稳定性日志在 60 次总支付 UC 滚动估计中有 %d 条“数组索引必须为正整数或逻辑值”记录，相应 MaxScoreSE 为 NaN；本次异常记录为 %d 条，标准误记录完整。旧表中这些周期的 Forecast 仍为有限值，且逐期与本次一致；旧实现先赋预测再计算后续诊断，异常记录不能等同于预测缺失。仅凭旧日志不能定位其历史运行时的具体错误点，本次不修改旧结果或抹去差异。因此不能声称所有输出完全相同。差异见“旧稳定性日志差异.csv”和“yyl新旧数值逐项核对.csv”。\n\n',c.stabilityDifference.LoggedFailureRows(1),c.stabilityDifference.LoggedFailureRows(2));
+ fprintf(f,'**新 C 的主要分析数值和结论与旧自然周一致，但稳定性日志不同。** 输入的 108 周训练金额和 4 周测试金额完全一致；12 张结果表中除“UC滚动估计稳定性.csv”外的 11 张表，所有列均通过核对。数值容差为 1e-6 + 1e-8 × 该列旧结果最大绝对值，非数值字段按精确匹配检查。\n\n');
+ fprintf(f,'旧稳定性日志在 60 次总支付 UC 滚动估计中有 %d 条“数组索引必须为正整数或逻辑值”记录，相应 MaxScoreSE 为 NaN；本次异常记录为 %d 条，标准误记录完整。旧表中这些周期的 Forecast 仍为有限值，且逐期与本次一致；旧实现先赋预测再计算后续诊断，异常记录不能等同于预测缺失。仅凭旧日志不能定位其历史运行时的具体错误点，本次不修改旧结果或抹去差异。因此不能声称所有输出完全相同。差异见“旧稳定性日志差异.csv”和“C新旧数值逐项核对.csv”。\n\n',c.stabilityDifference.LoggedFailureRows(1),c.stabilityDifference.LoggedFailureRows(2));
 else
- fprintf(f,'**新 yyl 与旧自然周结果存在差异。** 共有 %d 个列项目未通过核对，见 yyl新旧数值逐项核对.csv，不能声称完全复现。\n\n',sum(~c.checks.Match));
+ fprintf(f,'**新 C 与旧自然周结果存在差异。** 共有 %d 个列项目未通过核对，见 C新旧数值逐项核对.csv，不能声称完全复现。\n\n',sum(~c.checks.Match));
 end
 fprintf(f,'核对内容包含样本内拟合、模型方差参数、残差自相关与分布、异常候选、滚动预测的每期数值和稳定性记录、异常月份敏感性、最终参数、四周预测及测试汇总。\n\n');
 fprintf(f,'| 新人员 | 旧基线 | 新UC | 旧UC | 选模一致 | RW残差结论一致 | LLT残差结论一致 |\n| --- | --- | --- | --- | --- | --- | --- |\n');
@@ -30,19 +29,19 @@ for i=1:height(c.conclusion)
  fprintf(f,'| %s | %s | %s | %s | %s | %s | %s |\n',s.Person,s.Baseline,s.NewSelectedUC,s.OldSelectedUC,yesno(s.SameSelection),yesno(s.SameRWConclusion),yesno(s.SameLLTConclusion));
 end
 fprintf(f,'\n“残差结论一致”指两个固定滞后阶数均未拒绝零自相关的判断是否相同，不表示已经证明残差独立或模型正确。详细 p 值见各人诊断表。\n\n');
-fprintf(f,'旧月度总支付选 LLT，旧自然周与连续七天总支付选 RW。与月度结论不同本身不能判为复现失败，因为聚合边界、样本量、验证期及部分选模规则不同。cyx、tg 与旧 yyl 属于不同文件/人员，金额及模型表现也无需相同；仅 yyl 自然周具备同数据同流程的直接数值复现条件。\n\n');
+fprintf(f,'旧月度总支付选 LLT，旧自然周与连续七天总支付选 RW。与月度结论不同本身不能判为复现失败，因为聚合边界、样本量、验证期及部分选模规则不同。B、A 与旧 C 属于不同文件/人员，金额及模型表现也无需相同；仅 C 自然周具备同数据同流程的直接数值复现条件。\n\n');
 fprintf(f,'## 旧整月预测为何不能与本次四周合计直接相比\n\n');
 old=projectRoot+"_整理前备份_20261123";
 reference=readtable(fullfile(old,'output','三种频率十月累计预测比较.csv'),'TextType','string');
 writetable(reference,fullfile(out,'旧三频率整月预测参考.csv'),'Encoding','UTF-8');
-fprintf(f,'旧整合结果使用整月预测：月度 LLT 为 %.6f 元，自然周 RW 按天均匀分摊为 %.6f 元，连续七天 RW 按天均匀分摊为 %.6f 元，参照十月实际 %.2f 元。自然周整月方案需预测含 10-26 至 11-01 在内的 5 周，再分摊到十月；本次沿用原自然周六步流程，只评价已有真实数据的 4 个完整保留周。因此新 yyl 的四周合计应与旧自然周 UC独立测试汇总.csv 对照，不能与整月日分摊金额直接要求一致。\n\n',reference.Forecast(1),reference.Forecast(2),reference.Forecast(3),reference.OctoberActual(1));
+fprintf(f,'旧整合结果使用整月预测：月度 LLT 为 %.6f 元，自然周 RW 按天均匀分摊为 %.6f 元，连续七天 RW 按天均匀分摊为 %.6f 元，参照十月实际 %.2f 元。自然周整月方案需预测含 10-26 至 11-01 在内的 5 周，再分摊到十月；本次沿用原自然周六步流程，只评价已有真实数据的 4 个完整保留周。因此新 C 的四周合计应与旧自然周 UC独立测试汇总.csv 对照，不能与整月日分摊金额直接要求一致。\n\n',reference.Forecast(1),reference.Forecast(2),reference.Forecast(3),reference.OctoberActual(1));
 fprintf(f,'## 文件与运行\n\n');
-fprintf(f,'- cyx/、tg/、yyl/：各人的六步分析结果、PNG/FIG、CSV/MAT、运行日志及个人结论。\n');
+fprintf(f,'- B/、A/、C/：各人的六步分析结果、PNG/FIG、CSV/MAT、运行日志及个人结论。\n');
 fprintf(f,'- 三人UC结果汇总.csv、与旧结果结论对照.csv：跨人及旧三频率结论对照。\n');
-fprintf(f,'- yyl输入逐项核对.csv、yyl新旧数值逐项核对.csv：同口径复现证据。\n');
+fprintf(f,'- C输入逐项核对.csv、C新旧数值逐项核对.csv：同口径复现证据。\n');
 fprintf(f,'- 流程代码/：只包含总支付分析；运行口径.json 记录输入及旧源代码校验值。根目录 run_all_uc.m 为入口。\n\n');
 fprintf(f,'原生预测方差的尺度及多步尾部误差未重新校准，沿用旧流程不发布预测区间；不把异常残差候选当作删数据依据，不用测试误差重新选模。\n');
-for person=["cyx","tg","yyl"]
+for person=["A","B","C"]
  write_person(fullfile(out,person),person);
 end
 end

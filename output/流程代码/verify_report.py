@@ -9,7 +9,7 @@ def read(name):
 def close(a,b):return math.isclose(float(a),float(b),rel_tol=1e-9,abs_tol=1e-7)
 metrics=read('报告四模型性能汇总.csv');forecast=read('报告四模型固定原点预测.csv');totals=read('报告四模型累计预测.csv')
 assert len(metrics)==24 and len(forecast)==48 and len(totals)==12
-for person in ['cyx','tg','yyl']:
+for person in ['A','B','C']:
  wb=openpyxl.load_workbook(root/'data'/f'{person}_个人总支付_自然周.xlsx',data_only=True)
  values=[r[1] for r in list(wb.active.values)[1:]]
  scale=sum(abs(values[i]-values[i-1]) for i in range(1,108))/107
@@ -23,8 +23,9 @@ for person in ['cyx','tg','yyl']:
    for v in pred:
     assert close(v,sum(h[-3:])/3)
     h.append(v)
-  if model=='RW':
-   original=read(person+'/UC最终预测结果.csv');assert all(close(p,r['Forecast']) for p,r in zip(pred,original))
+  original=read(person+'/UC最终预测结果.csv')
+  if model==original[0]['Model']:
+   assert all(close(p,r['Forecast']) for p,r in zip(pred,original))
   errors=[p-a for p,a in zip(pred,actual)];mae=sum(map(abs,errors))/4
   m=next(r for r in metrics if r['Person']==person and r['Model']==model and r['Stage']=='测试4期')
   assert close(m['MAE'],mae) and close(m['RMSE'],math.sqrt(sum(e*e for e in errors)/4))
@@ -45,7 +46,7 @@ parser=argparse.ArgumentParser(description='核对报告数值和流程图；可
 parser.add_argument('--template',type=Path)
 args=parser.parse_args()
 reference=args.template
-docx=out/'三位成员周消费_UC与基准预测报告.docx'
+docx=out/'A_B_C成员周消费_UC与基准预测报告.docx'
 b=Document(docx)
 assert len(b.sections)==1
 if reference is not None:
@@ -55,7 +56,7 @@ if reference is not None:
   assert getattr(a.sections[0],k)==getattr(b.sections[0],k)
 assert len(b.inline_shapes)==10
 text='\n'.join(p.text for p in b.paragraphs)
-assert '成员A' not in text and 'AutoARIMA' not in text and 'Jarque–Bera检验' in text
+assert all('成员'+p in text for p in ['A','B','C']) and 'AutoARIMA' not in text and 'Jarque–Bera检验' in text
 assert '60条' in text and '11张表' in text
 assert all(c.text for t in b.tables for row in t.rows for c in row.cells)
 preserved=None

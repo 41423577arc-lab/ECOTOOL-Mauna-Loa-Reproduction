@@ -3,7 +3,7 @@ function run_all_uc()
 projectRoot=fileparts(mfilename('fullpath'));
 resultRoot=fullfile(projectRoot,'output');
 addpath(fullfile(resultRoot,'流程代码'));
-people=["cyx","tg","yyl"];
+people=["A","B","C"];
 for person=people
     inputFile=fullfile(projectRoot,'data',person+"_个人总支付_自然周.xlsx");
     personDir=fullfile(resultRoot,person);
