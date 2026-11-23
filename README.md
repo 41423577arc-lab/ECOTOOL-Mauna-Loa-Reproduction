@@ -2,6 +2,14 @@
 
 基于 MATLAB 与 ECOTOOL 的经典时间序列预测论文复现项目。
 
+## 已完成实验入口（2026-11-23复查）
+
+本分支已保存六模型扩展窗口实验，以及B/C四模型固定480个月滑动窗口的220轮实验。最新结果见[滑动窗口实验报告](results/comparison/sliding_480/experiment_summary.md)、[独立核验记录](results/comparison/sliding_480/audit.txt)和[协议比较图](results/comparison/sliding_480/comparison.png)。此前六模型实验见[扩展窗口实验说明](docs/final_experiment_summary.md)。下文的初始计划和任务清单保留为项目规划记录，不代表最新实验完成状态。
+
+照A固定lambda=0.2461的实验存在前视风险，报告另列仅用首轮训练集估计固定lambda的Airline、UC补充实验。AR12是新增补充基准，不能当作论文的自动AR模型。当前结论是描述性比较，尚不能确认作者完整滚动协议。
+
+复核前先按[数据准备说明](data/README.md)恢复作者固定版本MAT数据，并安装ECOTOOL。本分支未重复提交原始MAT文件；只克隆当前分支后，不能假定该文件已在工作目录中。已有检查点可直接在MATLAB项目根目录执行`addpath('src'); audit_bc_sliding480(220);`，不需要重新训练。完整导出及续跑命令见最新报告。
+
 本项目为三人小组课程作业，复现 Diego J. Pedregal（2019）发表于 *PLOS ONE* 的论文 *Time series analysis and forecasting with ECOTOOL* 中的 **Mauna Loa 大气 CO₂ 浓度预测案例**。
 
 我们将使用论文公开的数据及 ECOTOOL 工具箱，分析 CO₂ 浓度的时间序列特征，建立经典预测模型，并对照论文结果验证复现效果。

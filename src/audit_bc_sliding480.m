@@ -4,6 +4,13 @@ if nargin<1, rounds=220; end
 root=fileparts(fileparts(mfilename('fullpath'))); out=fullfile(root,'results','comparison','sliding_480');
 passed=false; checks=strings(0,1); tol=1e-9;
 try
+ % 核验作者固定版本的完整文件，避免仅凭观测数接受其他数据版本。
+ fid=fopen(fullfile(root,'data','dataPLOSpaper.mat'),'rb'); assert(fid>=0);
+ bytes=fread(fid,Inf,'*uint8'); fclose(fid);
+ md=java.security.MessageDigest.getInstance('SHA-256'); md.update(typecast(bytes,'int8'));
+ digest=lower(reshape(dec2hex(typecast(md.digest(),'uint8'),2).',1,[]));
+ assert(strcmp(digest,'4227a1d932b5765418957df172b767e5a9db3422979be01e5e56eb4ad7d25092'));
+ checks(end+1)="作者固定MAT数据的完整文件SHA-256通过。";
  S=load(fullfile(root,'data','dataPLOSpaper.mat'),'CO2'); y=S.CO2(:);
  D=load(fullfile(out,'checkpoint.mat'),'C'); C=D.C;
  assert(isequal(C.y,y)&&numel(y)==723 && isequal(size(C.done),[220 6]));

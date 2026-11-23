@@ -88,6 +88,7 @@ fprintf(fid,'## 协议与前视信息\n\n');
 fprintf(fid,'每轮训练CO2(r:r+479)，目标CO2(r+480:r+503)，起点1998-02至2016-05，目标1998-03至2018-05。模型结构和估计方法沿用B/C，不调整阶数。Airline外部变换后使用modelTF；UC使用modelUC(ty, [], ''LLT12'', 24)，二者均逆变换到ppm。AR12保持含截距OLS和递推。AutoARIMA使用modelAUTO(train,''s'',[1 12],''nofs'',24)，公开包装器默认boxcox=1，后端自动处理，直接取ppm预测，不重复变换或逆变换。加密后端无法逐行核查。\n\n');
 fprintf(fid,'A脚本注释称0.2461来自初始480月，但A4实际在CO2(25:504)估计。按工具箱同一目标函数重算：CO2(1:480)得到%.12f；CO2(25:504)得到%.12f，后者四舍五入为0.2461。故照A主实验可能含前视信息，尤其前24轮参数来源包含其训练期之后的观测；不能称为完全无信息泄漏。补充实验将lambda固定为首轮训练估计的完整精度值，AutoARIMA与AR12无需重跑。\n\n',C.config.lambdaFirst,C.config.lambdaSingle);
 fprintf(fid,'## 年度累计汇总\n\n单位：sMAPE为百分数；年度为前12、24步等权累计平均，绝非第12、24步点误差。差值为本实验减论文。AR12不是论文的自动AR，论文差值留空。\n\n');
+fprintf(fid,'逐轮逐步先计算`sMAPE(r,h)=200*abs(actual-forecast)/(abs(actual)+abs(forecast))`，以及`MASE(r,h)=abs(actual-forecast)/scale(r)`；`scale(r)=mean(abs(train(13:end)-train(1:end-12)))`，只用当轮480个月原始ppm数据。先对220轮取平均，再对前12或24步取平均。各步轮数相同，因此等价于全部220乘h个误差的等权平均。\n\n');
 fprintf(fid,'|模型|实验协议|1年sMAPE|2年sMAPE|1年MASE|2年MASE|与论文差异（s1/s2；M1/M2）|\n|---|---|---:|---:|---:|---:|---|\n');
 for name=["ETS" "SeasonalNaive" "Airline" "AutoARIMA" "UC" "AR12"]
  protocols=unique(V.protocol(V.model==name),'stable');
@@ -119,6 +120,14 @@ fprintf(fid,'上述分解采用先分母后预测的明确路径，属于算术�
 fprintf(fid,'与论文比较不存在一个全面占优的协议。照A设置下，Airline的两种年度指标均更接近论文；AutoARIMA的1年两指标及2年MASE更接近，但2年sMAPE反而略远。UC的两年两指标均更远，一年则sMAPE更远、MASE更近。首轮训练固定lambda补充实验中，UC的四个年度指标均比旧扩展窗口及照A主实验更接近论文，但仍未复现论文值；Airline的1年指标更贴近论文，而2年指标由照A固定0.2461更近。\n\n');
 fprintf(fid,'从误差分解看，Airline的MASE改善主要来自预测绝对误差下降；AutoARIMA及AR12的MASE改善主要来自分母变化。UC两年预测误差上升的贡献超过分母增大带来的下降，所以两年MASE仍恶化；UC一年及AR12两年都出现sMAPE上升而MASE下降，不能将MASE下降直接解释为预测改善。\n\n');
 fprintf(fid,'季节朴素使用滑动480月分母后的年度MASE为1.381332、2.067852，与论文1.381、2.068按三位小数一致，支持论文可能采用固定训练长度的分母。模型数值更接近论文属于额外相容证据，不能唯一确定作者的拟合窗口、变换、初值、估计器或异常值处理；朴素法也不能验证lambda。未进行显著性检验。\n\n');
+fprintf(fid,'## 最优模型与参数的适用范围\n\n在本次已比较的模型和协议中，以1年、2年累计sMAPE和MASE作描述性评价，Airline表现最好。需要无前视设置时，采用首轮训练固定lambda版本；不能将同一样本上的模型选择解释为独立验证的普遍最优，也不能称为已证明显著优于其他模型。\n\n');
+fprintf(fid,'Airline结构为ARIMA(0,1,1)(0,1,1)的12个月季节模型，`(1-B)(1-B^12)z(t)=(1+ma1*B)(1+ma12*B^12)epsilon(t)`，`z=(y^lambda-1)/lambda`。lambda固定为%.12f，两个MA系数每轮重新估计，不能用一组参数代表220轮。\n\n',C.config.lambdaFirst);
+fprintf(fid,'|训练轮次|训练索引|ma1|ma12|\n|---|---|---:|---:|\n');
+for r=[1 220]
+ par=C.models{r,5}.par; assert(numel(par)==2);
+ fprintf(fid,'|%d|CO2(%d:%d)|%.12f|%.12f|\n',r,r,r+479,par(1),par(2));
+end
+fprintf(fid,'\n以上为滚动实验参数，不是用全部723个月拟合的部署模型；残差方差与参数标准误详见检查点内对应轮次的估计表。\n\n');
 fprintf(fid,'## 版本、核验与复跑\n\nMATLAB：%s；ECOTOOL：%s。主实验拟合耗时%.3f秒；两模型补充耗时%.3f秒。参数、完整估计表、日志、实际输入、依赖路径和SHA256均在checkpoint.mat。UC包装器method可能显示EML，但实际位置调用后端的估计表应单独核对。核验PASS是数量、输入边界、数据尺度、导出一致性及公式正确性的检查，不证明加密优化器收敛。\n\n',C.env.matlab,strjoin(C.env.ecotool.Version,','),sum(C.seconds(:,1:4),'all'),sum(C.seconds(:,5:6),'all'));
 for j=[1 2 3 5 6]
  methods=strings(0,1); flagged=0;
@@ -134,6 +143,9 @@ if isfield(C,'execution'), fprintf(fid,'本次%d进程续跑墙钟耗时%.3f秒�
 fprintf(fid,'原A来源固定提交f8dabd8778ac9f277cbdd99cd7cfd9f94e513cf6，原B接口固定提交9225da80af22d5bbb2ddf6d727cc9db51a82968c，旧六模型结果来自本分支4e67c33的results/comparison。论文值复用该已核对的Table 4转录；A文档中的部分论文列曾串列，本实验使用原始CSV与统一转录，不采信其串列说明。所有旧成果保持原样。\n\n');
 fprintf(fid,'先完成3轮并独立核验PASS后续跑；为降低内存压力将4个工作进程改为2个。第87轮AutoARIMA的元胞返回字段触发元数据构造错误，改为标量结构逐字段保存后从检查点继续，未修改模型或估计设置。所有此前已保存预测及其耗时在续跑结束后逐值检查不变。运行时间字段为最后一次续跑的墙钟耗时，逐模型累计成功拟合时间另列，不能将其混称为全流程墙钟时间。\n\n');
 fprintf(fid,'首次运行时已执行run_bc_sliding480(3)及audit_bc_sliding480(3)。已有完整检查点时，以下命令仅跳过已完成拟合并重建导出与核验，不需要删除检查点。\n\n```matlab\naddpath(''src'');\nrun_bc_sliding480(220,2);\nsummarize_bc_sliding480;\naudit_bc_sliding480(220);\n```\n\n![协议比较](comparison.png)\n');
+fprintf(fid,'\n## 交付范围与数据准备\n\n原始MAT文件未纳入当前分支，克隆后必须先按[数据准备说明](../../../data/README.md)从固定Git对象恢复并核验文件SHA-256。汇总及独立核验还需要原A历史提交f8dabd8778ac9f277cbdd99cd7cfd9f94e513cf6的Git对象；首次运行前执行`git fetch origin Ariel`，不必切换分支。并行续跑需要Parallel Computing Toolbox，没有该工具箱可使用默认串行入口`run_bc_sliding480(220)`。\n\n');
+fprintf(fid,'结果目录共10个文件：主实验checkpoint.mat、predictions.csv、metrics_by_horizon.csv、table4_comparison.csv、audit.txt、comparison.png，以及first_train_lambda_predictions.csv、first_train_lambda_metrics_by_horizon.csv、mase_decomposition.csv、experiment_summary.md。checkpoint.mat第1至4列依次为Airline、AutoARIMA、UC、AR12，第5至6列是首轮训练lambda的Airline、UC。主实验预测21120条、补充10560条，逐步指标分别96行和48行。\n\n');
+fprintf(fid,'复核状态：本报告覆盖预测复现实验与协议比较，不代表PPT、演讲稿、Fig.3趋势复现或全项目课程交付均已验收。数据准备、核心公式、指标范围、模型参数、版本证据及复跑路径已列明；核验以audit.txt中最近一次实际执行结果为准。\n');
 disp(V(ismember(V.horizon,[12 24]),:));
 end
 
