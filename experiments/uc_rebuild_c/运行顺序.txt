@@ -1,0 +1,12 @@
+# 运行顺序（从仓库根目录，MATLAB R2026a）
+# 1 matlab -batch "addpath('experiments/uc_rebuild_c'); run_rebuild"
+# 2 matlab -batch "addpath('experiments/uc_rebuild_c'); supplement"
+# 3 matlab -batch "addpath('experiments/uc_rebuild_c'); verify_extra"
+# 4 matlab -batch "addpath('experiments/uc_rebuild_c'); finalize_checks"
+# 5 pwsh -File experiments/uc_rebuild_c/write_report.ps1
+# 本次运行执行了上述全部步骤；是否成功以日志及verification.txt为准。
+# 阶段顺序：run_rebuild先做尺度审计，再拟合扩展，锁定后读取历史保留金额。
+# 图片不属于选模数据，平滑曲线只用于样本内解释。
+
+# 6 matlab -batch "addpath('experiments/uc_rebuild_c'); polish_outputs"
+# 7 matlab -batch "addpath('experiments/uc_rebuild_c'); all_candidate_plots"

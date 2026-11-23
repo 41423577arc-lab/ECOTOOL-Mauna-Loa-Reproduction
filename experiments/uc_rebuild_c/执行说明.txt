@@ -1,0 +1,6 @@
+本次修正与限制记录：
+- 首次绘图导出因char字符与字符串扩展名相加报错，统一转string后重跑主实验，最终以COMPLETE日志为准。
+- 汇总核验读取results.mat时缺少models字段，改为从已锁定locked.mat恢复并追加；不改任何预测。
+- 两状态原生RW有未用参数，另跑标量RW核验native_scalar_rw，避免将奇异协方差当作可靠参数推断。
+- write_report.ps1应使用PowerShell 7（pwsh，当前环境默认）运行；Windows PowerShell 5无BOM UTF8中文解析失败。运行顺序中的powershell应替换为pwsh。
+- 新增模型仅为训练内验证及历史复评，未覆盖原正式模型，未推送。

@@ -1,0 +1,5 @@
+par(log variance)=[-5.01536070219285 -0.120231282132318]
+logL=-157.616
+    ExitFlag: 5
+     Options: [1×1 optim.options.Fminunc]
+

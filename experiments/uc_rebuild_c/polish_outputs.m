@@ -1,0 +1,7 @@
+function polish_outputs()
+here=fileparts(mfilename('fullpath'));root=fileparts(fileparts(here));s=load(fullfile(here,'results.mat'));tr=load(fullfile(root,'output','C','step01_training_data.mat'));T=readtable(fullfile(here,'final_variances.csv'),'TextType','string');T.LevelRatio(T.R==0)=NaN;T.Units=repmat("yuan_squared",height(T),1);T.Units(T.Model=="Log_RW")="log1p_squared";writetable(T,fullfile(here,'final_variances.csv'));
+f=figure('Visible','off','Position',[50 50 1500 850]);keep=T.R>0;bar(categorical(T.Model(keep)),log10(max(T.LevelRatio(keep),1e-12)));ylabel('log10(q/R)');title('状态/观测方差比；无观测噪声AR1不定义此比值');exportgraphics(f,fullfile(here,'04_variance_ratios.png'),'Resolution',130);savefig(f,fullfile(here,'04_variance_ratios.fig'));close(f);
+z=s.holdout(s.holdout.Model==s.selected,:);f=figure('Visible','off','Position',[50 50 1500 850]);plot(tr.tTest,[z.Actual z.Forecast],'-o');xticks(tr.tTest);xtickformat('yyyy-MM-dd');legend('历史保留真实值','锁定预测');title(s.selected+'固定原点四步','Interpreter','none');ylabel('每周消费/元');grid on;exportgraphics(f,fullfile(here,'10_holdout.png'),'Resolution',130);savefig(f,fullfile(here,'10_holdout.fig'));close(f);
+% Mean baseline innovation diagnostics, explicitly on full training fitted mean.
+y=tr.yTrain(:);e=y-mean(y);[h,p,Q]=lbqtest(e,'Lags',[6 13 26]);writetable(table([6;13;26],Q(:),p(:),h(:),'VariableNames',{'Lag','Statistic','P','Reject'}),fullfile(here,'mean_diagnostics.csv'));
+end

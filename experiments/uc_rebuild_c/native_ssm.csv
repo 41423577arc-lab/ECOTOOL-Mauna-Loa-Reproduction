@@ -1,0 +1,9 @@
+Model,Par,LogL,Optimizer,Failure
+RW,[-5.01536070219285 -0.120231282132318 -5],-157.615942897277,    ExitFlag: 5
+     Options: [1×1 optim.options.Fminunc]
+
+,
+LLT,[-20.6616375125402 -0.0909326526631036 -79.8124433225098],-167.060476448481,    ExitFlag: 5
+     Options: [1×1 optim.options.Fminunc]
+
+,

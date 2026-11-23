@@ -1,0 +1,10 @@
+Data,Test,Lag,Statistic,P,Reject
+Raw,ADF_constant_unitroot,0,-8.94959651271246,0.001,1
+Raw,KPSS_level_stationarity,4,0.708310522638544,0.0127899524874051,1
+Raw,KPSS_level_stationarity,8,0.601558294324187,0.022494700515983,1
+Winsor,ADF_constant_unitroot,0,-7.54113133361544,0.001,1
+Winsor,KPSS_level_stationarity,4,1.04589211463621,0.01,1
+Winsor,KPSS_level_stationarity,8,0.76655519704737,0.01,1
+Log1p,ADF_constant_unitroot,0,-8.07613119887432,0.001,1
+Log1p,KPSS_level_stationarity,4,0.975920911930705,0.01,1
+Log1p,KPSS_level_stationarity,8,0.736224110500717,0.0102523535908439,1
