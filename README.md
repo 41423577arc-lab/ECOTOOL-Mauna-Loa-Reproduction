@@ -26,6 +26,7 @@ B沿用净消费清洗和退款回冲原日口径，共同区间以外52.00元�
 - `output/季节周期4测试/`：修正数据后重跑的RW4、LLT4实验，与主流程分别保存。
 - `output/流程代码/`：分析、报告和独立核验程序。
 - `experiments/`：独立补充实验及中文报告，见`experiments/README.md`；包括27个固定原点四步回测和仅训练期IQR缩尾敏感性检验，不覆盖正式`output`。
+- `experiments/forecast_significance/`：只基于已有预测的HAC、区块Bootstrap及Holm显著性检验，见[中文报告](experiments/forecast_significance/results/预测性能显著性检验报告.md)。
 
 ## 运行与评价
 

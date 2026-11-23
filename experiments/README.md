@@ -38,3 +38,22 @@ Python需要`openpyxl`。报告为中文命名的Markdown文件，图表采用�
 敏感性报告将完整108周的IQR大额候选与`raw_data`核对。A只有周汇总CSV，仅能确认金额一致；B按`合并消费明细`的净消费重算；C按`04_周期内逐笔`的个人总支付重算。不能据此推断大额周一定是误记。来源行号等核对线索在`异常大额周来源核对.csv`，不发布逐笔消费描述。公开检出来源缺失时会如实标注尚未核对。
 
 完整模型及预测锁定保存在MAT中，明细、参数、阈值、缩尾记录、选模、最终测试和核验在各实验`results`中分开保存。重跑会更新该实验结果；不会更新正式报告或正式模型。
+
+## 预测性能差异显著性检验
+
+`forecast_significance/`只读取上述两个实验的已有预测明细及指标表，不重新拟合UC，不调用ECOTOOL，不改变现有预测或正式模型选择。六组UC与简单基准比较，加上三组原选UC的缩尾前后比较，共九组预先指定的双侧检验。
+
+在项目根目录运行：
+
+```matlab
+addpath(fullfile(pwd,'experiments','forecast_significance'));
+run_forecast_significance
+% 以后可单独重新核验已生成结果：
+verify_significance
+```
+
+每个原点先平均四步绝对损失差，以27个时间有序原点作推断：主HAC/Newey–West使用Bartlett权重、固定滞后3和渐近正态分布；Moving Block Bootstrap主区块长度4，重复10,000次、固定种子；九组主p值整体Holm校正。另完整保留HAC滞后2、4、6及区块长度3、5的敏感性结果，不据此更换主参数。
+
+MATLAB完成所有统计计算、绘图及中文报告生成。需要Statistics and Machine Learning Toolbox供独立核验的`normcdf`使用；无需ECOTOOL、Python或额外统计包。输入核验通过后才计算统计量，独立核验通过后写入`results/实验核验.json`。
+
+结果包括[预测性能显著性检验报告](forecast_significance/results/预测性能显著性检验报告.md)、九组检验CSV、243条原点级派生损失差、972条逐步长配对损失记录、稳健性表、置信区间PNG及统计MAT；原始预测不重复复制。普通Bootstrap区间未作多重比较校正。该实验只有27个重叠原点，属于历史数据上的探索性选择后比较，未拒绝相等不等于证明方法等效。

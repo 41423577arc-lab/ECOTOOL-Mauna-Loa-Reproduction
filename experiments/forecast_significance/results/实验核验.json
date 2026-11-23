@@ -1,0 +1,119 @@
+{
+  "all_checks_passed": true,
+  "input_validation": {
+    "all_inputs_passed": true,
+    "source_rows": [
+      1296,
+      1296
+    ],
+    "comparison_count": 9,
+    "origin_count": 27,
+    "horizon_count": 4,
+    "pairs_per_comparison": 108,
+    "origin_range": [
+      78,
+      104
+    ],
+    "target_range": [
+      79,
+      108
+    ],
+    "heldout_weeks_used": false,
+    "duplicate_keys": false,
+    "missing_or_nonfinite": false,
+    "raw_uc_predictions_match": true,
+    "actuals_match_all_pairs": true,
+    "previous_mae_recomputed": true,
+    "previous_receipts_passed": true
+  },
+  "parameters": {
+    "alpha": 0.05,
+    "main_lag": 3,
+    "lags": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "main_block": 4,
+    "blocks": [
+      3,
+      4,
+      5
+    ],
+    "bootstrap_repetitions": 10000,
+    "base_seed": 2.0261123E+7,
+    "n_origins": 27,
+    "horizons": 4,
+    "hac_distribution": "asymptotic standard normal, two-sided",
+    "hac_normalization": "autocovariance denominator N; no degrees-of-freedom correction",
+    "bootstrap_method": "non-circular overlapping moving blocks, percentile intervals",
+    "bootstrap_seed_rule": "base_seed + 1000*comparison_id + block_length"
+  },
+  "independent_checks": [
+    "独立重建972条有符号配对损失",
+    "243条原点均值与九组MAE复算",
+    "36组HAC矩阵二次型复核",
+    "Holm排序回填与已知例子复核",
+    "27组Bootstrap独立逐位置重采样及百分位数复核",
+    "全部输入SHA256未变化",
+    "未使用109至112周",
+    "中文报告限制项及图片链接检查"
+  ],
+  "input_sha256": [
+    {
+      "relative_path": "experiments/multi_origin_4step/results/多原点四步预测明细.csv",
+      "sha256": "d768baba691e582f9f4bc4b842285b6c4ad2697705cbbd58def30fbbd46ccbc7"
+    },
+    {
+      "relative_path": "experiments/multi_origin_4step/results/多步预测误差对比.csv",
+      "sha256": "4302f3960bdbea9506fc091d319189b03ceeab09fc767ae691d54d648bd72340"
+    },
+    {
+      "relative_path": "experiments/multi_origin_4step/results/实验核验.json",
+      "sha256": "83075cf10bc124fd7343cc85f1375acce65cfdb268b615a32a6ab64642238157"
+    },
+    {
+      "relative_path": "experiments/outlier_sensitivity/results/多原点四步预测明细.csv",
+      "sha256": "9c0fe5790717982ae584c781fecd2dbe15f2ddb253afd2818e7e4b6d74b6115f"
+    },
+    {
+      "relative_path": "experiments/outlier_sensitivity/results/多步预测误差对比.csv",
+      "sha256": "548f4771ed785f9b783a9c22e2e3f7deb8fcb44ae03bb4a07ce1a45bebe74743"
+    },
+    {
+      "relative_path": "experiments/outlier_sensitivity/results/实验核验.json",
+      "sha256": "83075cf10bc124fd7343cc85f1375acce65cfdb268b615a32a6ab64642238157"
+    },
+    {
+      "relative_path": "experiments/outlier_sensitivity/results/原始与缩尾模型性能比较.csv",
+      "sha256": "cc8e055f0e38b8a94b22c9b489ea365f0170ea5b25d1d4407c440801c7fa181c"
+    }
+  ],
+  "run_time": "2026-11-23 13:36:11 +0800",
+  "matlab_version": "26.1.0.3346908 (R2026a) Update 5",
+  "no_model_refit": true,
+  "no_ecotool_call": true,
+  "code_sha256": [
+    {
+      "file": "file_sha256.m",
+      "sha256": "79dc6e39df301370851bc2273b76ab5932dbf639f4e7cdaf9771ffc05a992c8e"
+    },
+    {
+      "file": "run_forecast_significance.m",
+      "sha256": "94d07198b46673862936f6b502964fef996ad0124fc456966b0ccba485e30ee1"
+    },
+    {
+      "file": "significance_inputs.m",
+      "sha256": "a3e514697b4944fd21ab40c081ab83b9579e355e286df5b8500f1bdea2ba5ca9"
+    },
+    {
+      "file": "verify_significance.m",
+      "sha256": "d053c458f0435158e3d9f9a668520993cdbcb26bb5e49a804075e730bc845699"
+    },
+    {
+      "file": "write_significance_report.m",
+      "sha256": "a8eadb23721c04f01badb2cb7bc3a0d77dbbf0e35e4d26c518900f73eb655df0"
+    }
+  ]
+}
