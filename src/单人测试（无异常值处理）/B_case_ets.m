@@ -11,11 +11,12 @@ clear; close all; clc
 
 root = 'G:\大学\课程\时间序列分析\ECOTOOL-Mauna-Loa-Reproduction';
 cd(root);
-base = 'G:\大学\课程\时间序列分析\银行流水提取\B_对齐';
+% 注意：对齐文件的标签与真实成员相反，B 的真实数据存放在 C_对齐 目录
+base = 'G:\大学\课程\时间序列分析\银行流水提取\C_对齐';
 smape = @(a,f) 200*abs(a-f)./(abs(a)+abs(f));
 
 %% ---------- 读取自然周数据 ----------
-Tw = readtable(fullfile(base,'B_个人总支付_自然周.csv'), ...
+Tw = readtable(fullfile(base,'C_个人总支付_自然周.csv'), ...
     'VariableNamingRule','preserve');
 y     = Tw.("个人总支付_元");
 dates = datetime(Tw.("周期起始日"));
@@ -52,6 +53,9 @@ for i = 1:nF
 end
 
 fprintf('\n--- 30 折滚动结果（B 数据）---\n');
+Tpred = table(R(:,1), R(:,2), R(:,3), R(:,4), ...
+    'VariableNames', {'k','actual','ETS_NN','ETS_AN'});
+writetable(Tpred, 'results/tables/B_weeks_test/B_rolling_predictions.csv');
 writeMetrics(R, smape, 'results/tables/B_weeks_test/B_rolling_metrics.csv');
 
 %% ---------- 二、最终五步预测（固定 108 周） ----------
@@ -74,7 +78,7 @@ cumB  = sum(w .* fB5);
 cumM  = sum(w .* fM5);
 
 % 10 月真实值（B 的月度表最后一行）
-Tm = readtable(fullfile(base,'B_个人总支付_月度.csv'), ...
+Tm = readtable(fullfile(base,'C_个人总支付_月度.csv'), ...
     'VariableNamingRule','preserve');
 vOct = Tm.("个人总支付_元");
 actualOct = vOct(end);

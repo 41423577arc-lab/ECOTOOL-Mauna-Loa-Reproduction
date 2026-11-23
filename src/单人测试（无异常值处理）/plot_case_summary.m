@@ -1,44 +1,38 @@
-%% ============================================================
-%  汇总作图：三人 × 四模型的滚动 MASE 与十月相对误差
-%  读取 results/tables/{A,B,C}_weeks_test/*.csv
-%  输出 results/figures/case_summary/
-%% ============================================================
+%% 汇总作图（仅 ETS）：三人 × ETS-NN / ETS-AN 的滚动指标与十月误差
 clear; close all; clc
 
 root = 'G:\大学\课程\时间序列分析\ECOTOOL-Mauna-Loa-Reproduction';
 cd(root);
 base = 'results/tables';
 people = {'A','B','C'};
-models = {'ETS-NN','ETS-AN','Naive','MA3'};
+models = {'ETS-NN','ETS-AN'};
 
-MASE = nan(4,3); MAE = nan(4,3); RMSE = nan(4,3);
-REL  = nan(4,3); CUM = nan(4,3);
+MASE = nan(2,3); MAE = nan(2,3); RMSE = nan(2,3); REL = nan(2,3);
 
 for p = 1:3
     T = readtable(fullfile(base,[people{p} '_weeks_test'], ...
         [people{p} '_rolling_metrics.csv']), 'VariableNamingRule','preserve');
-    MASE(:,p) = T.MASE;
-    MAE(:,p)  = T.MAE;
-    RMSE(:,p) = T.RMSE;
+    MASE(:,p) = T.MASE(1:2);
+    MAE(:,p)  = T.MAE(1:2);
+    RMSE(:,p) = T.RMSE(1:2);
 
     O = readtable(fullfile(base,[people{p} '_weeks_test'], ...
         [people{p} '_oct_cum.csv']), 'VariableNamingRule','preserve');
-    REL(:,p) = O.abs_rel_error_pct;
-    CUM(:,p) = O.oct_cum;
+    REL(:,p) = O.abs_rel_error_pct(1:2);
 end
 
 %% 图1：30 折滚动 MASE
-f1 = figure('Color','w','Position',[100 100 900 420]);
+f1 = figure('Color','w','Position',[100 100 850 420]);
 bar(MASE);
 hold on;
 yline(1, 'k--', 'LineWidth', 1.3);
 set(gca, 'XTickLabel', models);
 ylabel('MASE (30-fold rolling)');
-title('Rolling one-step MASE by model and person');
+title('Rolling one-step MASE (ETS only)');
 legend(people, 'Location','northwest');
 grid on; box off; hold off;
 
-for i = 1:4
+for i = 1:2
     for p = 1:3
         text(i + (p-2)*0.22, MASE(i,p)+0.03, sprintf('%.3f',MASE(i,p)), ...
             'HorizontalAlignment','center','FontSize',8);
@@ -48,15 +42,15 @@ exportgraphics(f1, 'results/figures/case_summary/case_mase_by_model.png', ...
     'Resolution', 200, 'BackgroundColor', 'white');
 
 %% 图2：十月累计相对误差
-f2 = figure('Color','w','Position',[100 100 900 420]);
+f2 = figure('Color','w','Position',[100 100 850 420]);
 bar(REL);
 set(gca, 'XTickLabel', models);
 ylabel('Absolute relative error (%)');
-title('October cumulative forecast: relative error');
+title('October cumulative forecast: relative error (ETS only)');
 legend(people, 'Location','northwest');
 grid on; box off;
 
-for i = 1:4
+for i = 1:2
     for p = 1:3
         text(i + (p-2)*0.22, REL(i,p)+2, sprintf('%.1f%%',REL(i,p)), ...
             'HorizontalAlignment','center','FontSize',8);
@@ -66,17 +60,17 @@ exportgraphics(f2, 'results/figures/case_summary/case_oct_error.png', ...
     'Resolution', 200, 'BackgroundColor', 'white');
 
 %% 图3：30 折滚动 MAE
-f3 = figure('Color','w','Position',[100 100 900 420]);
+f3 = figure('Color','w','Position',[100 100 850 420]);
 bar(MAE);
 set(gca, 'XTickLabel', models);
 ylabel('MAE (CNY per week)');
-title('Rolling one-step MAE by model and person');
+title('Rolling one-step MAE (ETS only)');
 legend(people, 'Location','northwest');
 grid on; box off;
 exportgraphics(f3, 'results/figures/case_summary/case_mae_by_model.png', ...
     'Resolution', 200, 'BackgroundColor', 'white');
 
-fprintf('已生成：\n');
-fprintf('  results/figures/case_summary/case_mase_by_model.png\n');
-fprintf('  results/figures/case_summary/case_oct_error.png\n');
-fprintf('  results/figures/case_summary/case_mae_by_model.png\n');
+fprintf('已生成（仅 ETS）：\n');
+fprintf('  case_mase_by_model.png\n');
+fprintf('  case_oct_error.png\n');
+fprintf('  case_mae_by_model.png\n');
