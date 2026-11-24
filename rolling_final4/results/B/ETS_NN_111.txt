@@ -1,0 +1,47 @@
+                                                        First-order
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           2      1.77701e+08                      1.06e+08
+     1          12      1.73014e+08    5.90233e-10       1.87e+07
+     2          16       1.7299e+08       0.281486       1.59e+05
+     3          18       1.7299e+08              1       1.33e+04
+     4          20       1.7299e+08              1             10
+
+正在使用目标函数计算有限差分黑塞矩阵。
+
+<a href = "matlab: helpview('optim','local_min_unconstrained','CSHelpWindow');">找到局部最小值</a>。
+
+优化已完成，因为<a href = "matlab: helpview('optim','grad_size','CSHelpWindow');">梯度大小</a>小于
+<a href = "matlab: helpview('optim','optimality_tolerance_unc','CSHelpWindow');">最优性容差</a>的值。
+
+<<a href = "matlab: createExitMsg({'optim:fminusub:Exit1basic'},{'optim:fminusub:Exit1detailed','9.443727e-08','1.000000e-06'},true,true);;">停止条件详细信息</a>>
+
+
+----------------------------------------------
+Exponential Smoothing Estimation Results
+Date: 24-Nov-2026   /  Time: 12:01
+----------------------------------------------
+Estimation method: CONDITIONAL SUM OF SQUARES
+Missing values: 0
+Optimiser: FMINUNC
+Time: 0 seconds
+----------------------------------------------
+          PARAM    STERR   T-TEST  P-value
+----------------------------------------------
+ level  0.04012  0.02209  1.81621  0.07206
+----------------------------------------------
+               AIC: 14.2957
+               SBC: 14.3204
+               HQC: 14.3058
+Objective Function: 172990034.6879
+      Corrected R2: 0.002884
+ Residual Variance: 1587064.5384
+----------------------------------------------
+
+
+----------------------------------------------
+           Correlation matrix of estimates
+----------------------------------------------
+         level
+----------------------------------------------
+ level  1.0000
+----------------------------------------------

@@ -1,0 +1,54 @@
+                                                        First-order
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           3          724.116                      5.98e+03
+     1           6          341.347     0.00016719            364
+     2           9          309.686              1            275
+     3          12          245.227              1           89.8
+     4          18          241.878       0.617715           65.9
+     5          21          240.741              1           56.4
+     6          24          236.982              1           16.5
+     7          27          236.909              1           2.09
+     8          30          236.908              1          0.151
+     9          33          236.908              1        0.00183
+
+正在使用目标函数计算有限差分黑塞矩阵。
+
+<a href = "matlab: helpview('optim','local_min_unconstrained','CSHelpWindow');">找到局部最小值</a>。
+
+优化已完成，因为<a href = "matlab: helpview('optim','grad_size','CSHelpWindow');">梯度大小</a>小于
+<a href = "matlab: helpview('optim','optimality_tolerance_unc','CSHelpWindow');">最优性容差</a>的值。
+
+<<a href = "matlab: createExitMsg({'optim:fminusub:Exit1basic'},{'optim:fminusub:Exit1detailed','3.057643e-07','1.000000e-06'},true,true);;">停止条件详细信息</a>>
+
+
+----------------------------------------------
+Exponential Smoothing Estimation Results
+Date: 24-Nov-2026   /  Time: 12:00
+----------------------------------------------
+Estimation method: CONDITIONAL SUM OF SQUARES
+Missing values: 0
+Optimiser: FMINUNC
+Time: 0 seconds
+----------------------------------------------
+          PARAM    STERR   T-TEST  P-value
+----------------------------------------------
+ level  0.66510  0.09239  7.19893  0.00000
+ slope  0.17443  0.04569  3.81748  0.00023
+----------------------------------------------
+               AIC: 0.83223
+               SBC: 0.88218
+               HQC: 0.85248
+Objective Function: 236.9078
+      Corrected R2: -1.2352
+ Residual Variance: 2.2141
+----------------------------------------------
+
+
+----------------------------------------------
+           Correlation matrix of estimates
+----------------------------------------------
+          level   slope
+----------------------------------------------
+ level   1.0000       -
+ slope  -0.2436  1.0000
+----------------------------------------------

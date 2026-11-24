@@ -1,0 +1,10 @@
+﻿RemoteLabel,CanonicalMember,Rows,MaxActualDifference,MatchingRows,RemotePath
+A,A,30,0,30,results/tables/A_weeks_test/A_rolling_predictions.csv
+A,B,30,8312.48,0,results/tables/A_weeks_test/A_rolling_predictions.csv
+A,C,30,5206.31,0,results/tables/A_weeks_test/A_rolling_predictions.csv
+B,A,30,8312.48,0,results/tables/B_weeks_test/B_rolling_predictions.csv
+B,B,30,0,30,results/tables/B_weeks_test/B_rolling_predictions.csv
+B,C,30,8415.95,0,results/tables/B_weeks_test/B_rolling_predictions.csv
+C,A,30,5206.31,0,results/tables/C_weeks_test/C_rolling_predictions.csv
+C,B,30,8415.95,0,results/tables/C_weeks_test/C_rolling_predictions.csv
+C,C,30,0,30,results/tables/C_weeks_test/C_rolling_predictions.csv

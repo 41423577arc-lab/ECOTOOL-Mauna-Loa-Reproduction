@@ -1,0 +1,10 @@
+{
+  "PredictionRows": 120,
+  "ParameterRows": 60,
+  "ScaleChecks": 24,
+  "CanonicalSourceReconciliation": "ABC each 112 weeks passed",
+  "FixedUCComparison": "all 24 values matched existing latest UC outputs",
+  "Metrics": "recomputed from unrounded predictions",
+  "FirstTarget": "2026-09-28",
+  "LastTargetWeekEnd": "2026-10-25"
+}

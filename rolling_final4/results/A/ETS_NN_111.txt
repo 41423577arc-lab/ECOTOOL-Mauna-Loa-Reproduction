@@ -1,0 +1,49 @@
+                                                        First-order
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           2      1.35544e+08                      7.83e+07
+     1           8      1.34131e+08    7.05236e-10       8.68e+06
+     2          10      1.34096e+08              1       4.01e+06
+     3          12      1.34088e+08              1        4.3e+05
+     4          14      1.34087e+08              1       1.89e+04
+     5          16      1.34087e+08              1             86
+     6          18      1.34087e+08              1              1
+
+正在使用目标函数计算有限差分黑塞矩阵。
+
+<a href = "matlab: helpview('optim','local_min_unconstrained','CSHelpWindow');">找到局部最小值</a>。
+
+优化已完成，因为<a href = "matlab: helpview('optim','grad_size','CSHelpWindow');">梯度大小</a>小于
+<a href = "matlab: helpview('optim','optimality_tolerance_unc','CSHelpWindow');">最优性容差</a>的值。
+
+<<a href = "matlab: createExitMsg({'optim:fminusub:Exit1basic'},{'optim:fminusub:Exit1detailed','1.276503e-08','1.000000e-06'},true,true);;">停止条件详细信息</a>>
+
+
+----------------------------------------------
+Exponential Smoothing Estimation Results
+Date: 24-Nov-2026   /  Time: 12:01
+----------------------------------------------
+Estimation method: CONDITIONAL SUM OF SQUARES
+Missing values: 0
+Optimiser: FMINUNC
+Time: 0 seconds
+----------------------------------------------
+          PARAM    STERR   T-TEST  P-value
+----------------------------------------------
+ level  0.14544  0.05028  2.89243  0.00461
+----------------------------------------------
+               AIC: 14.041
+               SBC: 14.0657
+               HQC: 14.051
+Objective Function: 134087439.578
+      Corrected R2: -0.13168
+ Residual Variance: 1230159.9961
+----------------------------------------------
+
+
+----------------------------------------------
+           Correlation matrix of estimates
+----------------------------------------------
+         level
+----------------------------------------------
+ level  1.0000
+----------------------------------------------

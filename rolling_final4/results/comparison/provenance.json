@@ -1,0 +1,35 @@
+{
+  "ets_commit": "f69ea4c27d261bc657d66b8e8e64f958abb0471f",
+  "ets_source_sha256": {
+    "src/单人测试（无异常值处理）/A_case_ets_aligned.m": "093237dab0ca3e20175e2ed2762eed5bad184d3db03963e39c16741c832b80f0",
+    "src/单人测试（无异常值处理）/B_case_ets.m": "b4a449608a22c5eaaade8845ee8c0eab2b355cb02dea606314bdb8258d29d196",
+    "src/单人测试（无异常值处理）/C_case_ets.m": "85e6dcd1ddbe1a9d5eab9fdc592b2c86ce4499b1d607ac997d45a2a1dfc25d82"
+  },
+  "uc_source_sha256": "f92b03d20222d171f0ab4a61e91e4225980a165fbfe3fbaa79bf7ba14baf2a3d",
+  "uc_source": "experiments/uc_ssm_rebuild/run_uc_ssm.m",
+  "branch": "codex/uc-rebuild-c",
+  "data": {
+    "A_个人总支付_自然周.xlsx": "7446eb7bdbaa83db4dcdefaeee4c094bdf511c2e03fb9bcd52c75b8d98e272af",
+    "B_个人总支付_自然周.xlsx": "6cada3fb4eb53e31ab23c43eaba13f288a4fdcf8501c97c0c7da4f7c5cda8c9c",
+    "C_个人总支付_自然周.xlsx": "26596b28f3ff9ddb854f4a9a0ab1bd06998ac77b3ae5bfe3f0e0845b64374527"
+  },
+  "ecotool_dependencies_sha256": {
+    "modelETS.m": "4156ee09956c0e7dbcbaff7551bf308be38d6340b4e5dc20227d24df228ef98a",
+    "modelETS0.p": "025f2f4075db1d073529939feee90ba9e193dfcc0c28bc3dde65a2ab16692451",
+    "fisET.m": "545fefa1848517997f956a144720cd8ed6ccf0bb8a31b35a733c5b241c6f7116",
+    "auxmodelESSS.m": "e1ba77f83ce0315a0a7ac1580b4a95919ac8f9c0c8aa04b15c3514f47696bd1b",
+    "kfiniet.m": "09547eb9abc0ec1f9fe8277fdcaf21f1c49ebe52c0d9c05aaf49058e9a007097",
+    "textoutputWINDOW.m": "4c0b7e81868755cfef17d4852d67592beb4d42e4d5fe03e3822e82dd78dea1b9"
+  },
+  "uc_extracted_sha256": "b3003059e14bc8ddbc1073aaf3fd6e7739c05bad5145df846f368b4a3ed03cf2",
+  "experiment_source_sha256": {
+    "check_ets_affine.m": "ccd64b79510ef73ef551019382415ed811dee98bfb6320a60c029eca5cb1014d",
+    "prepare_sources.py": "1d98512dcf0b5c91b5217024bc857f7d6e10d01e56940d7f32374f5dbba5d2fd",
+    "run_final4.m": "805df70cb5e0686e57588bc18fbaef8e7e207d050b46da6cb19dcfb1c5ae3930",
+    "summarize_verify.py": "e7fb233731295d5dca14adc606d428f781a7a9c45038d2e66e80f45cb88edfbd",
+    "src\\arima\\fit_mean_final4.m": "c9606a90f81c717aae21898e06dfc4fa5cdcca15221e77a13d51f24105784b24",
+    "src\\ets\\fit_ets_final4.m": "a1c7082fde0da220a9eca3893f7ac1f2d1126b6899cd4e388999f79efd8c3974",
+    "src\\ets\\textoutputWINDOW.m": "ea4e430b1d55a3db2f0f9cc647bc8801a856c5f8fc96f126fc5aa0842e3e4cff",
+    "src\\uc\\fit_uc_final4.m": "b3003059e14bc8ddbc1073aaf3fd6e7739c05bad5145df846f368b4a3ed03cf2"
+  }
+}

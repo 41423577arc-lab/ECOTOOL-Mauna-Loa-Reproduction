@@ -1,0 +1,57 @@
+                                                        First-order
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0           3          152.738                           602
+     1          18           126.74    0.000103781            349
+     2          27          118.504           0.25            305
+     3          45          117.178        0.03125           97.1
+     4          48          117.163              1           89.3
+     5          51          117.092              1             27
+     6          54          117.016              1           61.4
+     7          57          116.934              1           83.4
+     8          60          116.848              1           24.5
+     9          63          116.843              1            4.8
+    10          66          116.843              1          0.403
+    11          69          116.843              1        0.00406
+    12          72          116.843              1       0.000107
+
+正在使用目标函数计算有限差分黑塞矩阵。
+
+<a href = "matlab: helpview('optim','local_min_unconstrained','CSHelpWindow');">找到局部最小值</a>。
+
+优化已完成，因为<a href = "matlab: helpview('optim','grad_size','CSHelpWindow');">梯度大小</a>小于
+<a href = "matlab: helpview('optim','optimality_tolerance_unc','CSHelpWindow');">最优性容差</a>的值。
+
+<<a href = "matlab: createExitMsg({'optim:fminusub:Exit1basic'},{'optim:fminusub:Exit1detailed','1.770668e-07','1.000000e-06'},true,true);;">停止条件详细信息</a>>
+
+
+----------------------------------------------
+Exponential Smoothing Estimation Results
+Date: 24-Nov-2026   /  Time: 12:01
+----------------------------------------------
+Estimation method: CONDITIONAL SUM OF SQUARES
+Missing values: 0
+Optimiser: FMINUNC
+Time: 0 seconds
+----------------------------------------------
+          PARAM    STERR   T-TEST  P-value
+----------------------------------------------
+ level  0.10528  0.04717  2.23182  0.02773
+ slope  0.00815  0.00425  1.91849  0.05774
+----------------------------------------------
+               AIC: 0.14497
+               SBC: 0.19552
+               HQC: 0.16545
+Objective Function: 116.8431
+      Corrected R2: -0.12359
+ Residual Variance: 1.1128
+----------------------------------------------
+
+
+----------------------------------------------
+           Correlation matrix of estimates
+----------------------------------------------
+          level   slope
+----------------------------------------------
+ level   1.0000       -
+ slope  -0.0759  1.0000
+----------------------------------------------

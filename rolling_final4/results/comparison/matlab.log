@@ -1,0 +1,109 @@
+A n=108 ARIMA(0,0,0) 0.03s forecast=798.382037
+A n=108 ETS-NN 8.97s forecast=1139.437027
+A n=108 ETS-AN 1.26s forecast=558.781742
+[警告: Covariance matrix of estimators cannot be computed precisely due to inversion difficulty. Check parameter identifiability. Also try different starting values and
+other options to compute the covariance matrix.]
+[> 位置：statespace/estimate (第 761 行)
+位置: ssm/estimate (第 254 行)
+位置: fit_uc_final4>fitUC (第 46 行)
+位置: fit_uc_final4 (第 3 行)
+位置: run_final4 (第 44 行)]
+A n=108 UC-RW 10.03s forecast=798.380814
+A n=108 UC-LLT 5.33s forecast=752.273607
+A n=109 ARIMA(0,0,0) 0.00s forecast=793.626330
+A n=109 ETS-NN 0.96s forecast=1005.674252
+A n=109 ETS-AN 0.68s forecast=72.180998
+A n=109 UC-RW 1.84s forecast=793.622528
+A n=109 UC-LLT 3.52s forecast=693.134999
+A n=110 ARIMA(0,0,0) 0.00s forecast=794.090545
+A n=110 ETS-NN 0.42s forecast=981.782909
+A n=110 ETS-AN 0.49s forecast=428.386603
+[警告: Covariance matrix of estimators cannot be computed precisely due to inversion difficulty. Check parameter identifiability. Also try different starting values and
+other options to compute the covariance matrix.]
+[> 位置：statespace/estimate (第 761 行)
+位置: ssm/estimate (第 254 行)
+位置: fit_uc_final4>fitUC (第 46 行)
+位置: fit_uc_final4 (第 3 行)
+位置: run_final4 (第 44 行)]
+A n=110 UC-RW 1.85s forecast=794.089494
+A n=110 UC-LLT 2.42s forecast=702.336381
+A n=111 ARIMA(0,0,0) 0.00s forecast=790.992973
+A n=111 ETS-NN 0.35s forecast=903.898303
+A n=111 ETS-AN 0.32s forecast=286.642104
+[警告: Covariance matrix of estimators cannot be computed precisely due to inversion difficulty. Check parameter identifiability. Also try different starting values and
+other options to compute the covariance matrix.]
+[> 位置：statespace/estimate (第 761 行)
+位置: ssm/estimate (第 254 行)
+位置: fit_uc_final4>fitUC (第 46 行)
+位置: fit_uc_final4 (第 3 行)
+位置: run_final4 (第 44 行)]
+A n=111 UC-RW 1.59s forecast=790.991891
+A n=111 UC-LLT 1.90s forecast=671.485339
+B n=108 ARIMA(0,0,0) 0.01s forecast=1024.448519
+B n=108 ETS-NN 0.71s forecast=1375.379189
+B n=108 ETS-AN 0.65s forecast=1675.020788
+B n=108 UC-RW 1.97s forecast=1418.490082
+[警告: Covariance matrix of estimators cannot be computed precisely due to inversion difficulty. Check parameter identifiability. Also try different starting values and
+other options to compute the covariance matrix.]
+[> 位置：statespace/estimate (第 761 行)
+位置: ssm/estimate (第 254 行)
+位置: fit_uc_final4>fitUC (第 46 行)
+位置: fit_uc_final4 (第 3 行)
+位置: run_final4 (第 44 行)]
+B n=108 UC-LLT 2.85s forecast=1624.580070
+B n=109 ARIMA(0,0,0) 0.00s forecast=1026.688165
+B n=109 ETS-NN 0.42s forecast=1369.445510
+B n=109 ETS-AN 0.45s forecast=1648.277521
+B n=109 UC-RW 0.48s forecast=1408.851146
+B n=109 UC-LLT 2.04s forecast=1622.394263
+B n=110 ARIMA(0,0,0) 0.00s forecast=1028.500182
+B n=110 ETS-NN 0.41s forecast=1361.764298
+B n=110 ETS-AN 0.45s forecast=1620.207353
+B n=110 UC-RW 0.77s forecast=1397.836566
+[警告: Covariance matrix of estimators cannot be computed precisely due to inversion difficulty. Check parameter identifiability. Also try different starting values and
+other options to compute the covariance matrix.]
+[> 位置：statespace/estimate (第 761 行)
+位置: ssm/estimate (第 254 行)
+位置: fit_uc_final4>fitUC (第 46 行)
+位置: fit_uc_final4 (第 3 行)
+位置: run_final4 (第 44 行)]
+B n=110 UC-LLT 1.84s forecast=1618.781968
+B n=111 ARIMA(0,0,0) 0.00s forecast=1028.715676
+B n=111 ETS-NN 0.33s forecast=1345.854483
+B n=111 ETS-AN 0.37s forecast=1574.800633
+B n=111 UC-RW 0.53s forecast=1378.094111
+[警告: Covariance matrix of estimators cannot be computed precisely due to inversion difficulty. Check parameter identifiability. Also try different starting values and
+other options to compute the covariance matrix.]
+[> 位置：statespace/estimate (第 761 行)
+位置: ssm/estimate (第 254 行)
+位置: fit_uc_final4>fitUC (第 46 行)
+位置: fit_uc_final4 (第 3 行)
+位置: run_final4 (第 44 行)]
+B n=111 UC-LLT 1.56s forecast=1608.881740
+C n=108 ARIMA(0,0,0) 0.00s forecast=789.291019
+C n=108 ETS-NN 0.32s forecast=1172.678960
+C n=108 ETS-AN 0.41s forecast=1469.069546
+C n=108 UC-RW 0.58s forecast=1217.938070
+C n=108 UC-LLT 1.57s forecast=1174.714602
+C n=109 ARIMA(0,0,0) 0.00s forecast=788.859908
+C n=109 ETS-NN 0.33s forecast=1125.923082
+C n=109 ETS-AN 0.36s forecast=1344.682625
+C n=109 UC-RW 0.52s forecast=1152.354443
+[警告: Covariance matrix of estimators cannot be computed precisely due to inversion difficulty. Check parameter identifiability. Also try different starting values and
+other options to compute the covariance matrix.]
+[> 位置：statespace/estimate (第 761 行)
+位置: ssm/estimate (第 254 行)
+位置: fit_uc_final4>fitUC (第 46 行)
+位置: fit_uc_final4 (第 3 行)
+位置: run_final4 (第 44 行)]
+C n=109 UC-LLT 1.61s forecast=1164.586164
+C n=110 ARIMA(0,0,0) 0.00s forecast=796.272273
+C n=110 ETS-NN 0.35s forecast=1172.538297
+C n=110 ETS-AN 0.34s forecast=1398.990001
+C n=110 UC-RW 0.33s forecast=1204.729422
+C n=110 UC-LLT 1.37s forecast=1187.597991
+C n=111 ARIMA(0,0,0) 0.00s forecast=796.237748
+C n=111 ETS-NN 0.35s forecast=1135.403073
+C n=111 ETS-AN 0.33s forecast=1320.739837
+C n=111 UC-RW 0.33s forecast=1157.040735
+C n=111 UC-LLT 1.38s forecast=1180.304397

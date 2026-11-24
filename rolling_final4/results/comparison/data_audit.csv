@@ -1,0 +1,4 @@
+﻿Person,File,SHA256,Source,SourceSHA256,Weeks,Total,TrainTotal,TestTotal,FirstWeek,LastWeek,SourceMaxDifference,Scope
+A,data\A_个人总支付_自然周.xlsx,7446eb7bdbaa83db4dcdefaeee4c094bdf511c2e03fb9bcd52c75b8d98e272af,raw_data\A_个人总支付_自然周.csv,63547d117420fccb98e553258ab7c5f054f3b7eef8f3be3a1b8d7d572cb7a419,112,88167.33,86225.26,1942.07,2024-09-02,2026-10-19,0,个人总支付；未减退款
+B,data\B_个人总支付_自然周.xlsx,6cada3fb4eb53e31ab23c43eaba13f288a4fdcf8501c97c0c7da4f7c5cda8c9c,raw_data\B_个人总支付_自然周.xlsx,0552aee4f8e56024a89603dce227f5f1fdd69f7f6542a9514625fbee830980de,112,114959.44,110640.44,4319,2024-09-02,2026-10-19,1.81898940355e-12,净消费、退款回冲原日（既有口径）
+C,data\C_个人总支付_自然周.xlsx,26596b28f3ff9ddb854f4a9a0ab1bd06998ac77b3ae5bfe3f0e0845b64374527,raw_data\C_个人总支付_自然周.xlsx,21084d08fc7641a7adcc92359dd2832a6d3d884990263a5396df37aad9621308,112,88773.97,85243.43,3530.54,2024-09-02,2026-10-19,4.54747350886e-13,原总支付、保留校园卡代理及已确认大额事件
