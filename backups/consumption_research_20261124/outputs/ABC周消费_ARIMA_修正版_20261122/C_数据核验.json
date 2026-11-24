@@ -1,0 +1,14 @@
+{
+  "Member": "C",
+  "File": "C:\\Users\\aerith\\Desktop\\C.xlsx",
+  "Sheet": "03_周期统计",
+  "DateField": "起始日期",
+  "AmountField": "个人总支付_元",
+  "SourceRows": 112,
+  "WeeklyN": 112,
+  "Start": "2024-09-02",
+  "End": "2026-10-25",
+  "Total": "88773.97",
+  "RegularTotalNotUsed": "69730.96",
+  "TotalEqualsRegularPlusIrregular": true
+}

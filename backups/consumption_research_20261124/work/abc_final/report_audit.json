@@ -1,0 +1,26 @@
+{
+  "planned_pages": 8,
+  "sections": [
+    "总览",
+    "三份数据共同采用的处理与模型设置",
+    "A 数据预测结果",
+    "B 数据预测结果",
+    "C 数据预测结果",
+    "最终模型与四期预测金额",
+    "自动识别记录与数据核验",
+    "30折共同目标周逐折结果"
+  ],
+  "figures": 6,
+  "validation_rows": 90,
+  "test_rows": 12,
+  "source_files": {
+    "A": "C:\\Users\\aerith\\Desktop\\A.csv",
+    "B": "C:\\Users\\aerith\\Desktop\\B.xlsx",
+    "C": "C:\\Users\\aerith\\Desktop\\C.csv"
+  },
+  "final_models": {
+    "A": "ARIMA(0,1,1) 带漂移",
+    "B": "ARIMA(0,1,1) 带漂移",
+    "C": "ARIMA(2,1,1) 带漂移"
+  }
+}

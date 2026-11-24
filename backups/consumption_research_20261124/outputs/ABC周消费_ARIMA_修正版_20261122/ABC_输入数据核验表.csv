@@ -1,0 +1,4 @@
+﻿Member,Source,Sheet,DateField,AmountField,SourceRows,Weeks,FirstWeekStart,LastWeekStart,LastWeekEnd,ComputedTotal,MissingWeeks,DuplicateWeeks,InvalidAmounts
+A,成员A_周.csv,CSV,周期起始日,个人总支付_元,112,112,2024-09-02,2026-10-19,2026-10-25,64470.55,0,0,0
+B,B.xlsx,合并消费明细,周起始日,净消费（元）,2155,112,2024-09-02,2026-10-19,2026-10-25,114959.44,0,0,0
+C,C.xlsx,03_周期统计,起始日期,个人总支付_元,112,112,2024-09-02,2026-10-19,2026-10-25,88773.97,0,0,0

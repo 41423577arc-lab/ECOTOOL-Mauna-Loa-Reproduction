@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-23",
+  "model": "ARIMA(0,0,0) with constant / historical mean",
+  "p": 0,
+  "d": 0,
+  "q": 0,
+  "seasonal": false,
+  "automatic_identification": false,
+  "fit": "arithmetic mean of available training observations",
+  "training_n": 108,
+  "test_n": 4,
+  "rolling_training_lengths": [
+    78,
+    107
+  ],
+  "LB_lags": [
+    6,
+    12
+  ],
+  "alpha": 0.05,
+  "figures": 6,
+  "source": "上一轮正确三位成员112周输入；B为经确认净消费，C为个人总支付。",
+  "verification": "均值预测及四项指标与上一版HistoricalMean逐项核验一致。"
+}

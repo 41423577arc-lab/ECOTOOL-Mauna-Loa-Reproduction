@@ -1,0 +1,13 @@
+{
+  "Member": "A",
+  "File": "C:\\Users\\aerith\\Desktop\\成员A_周.csv",
+  "Sheet": "CSV",
+  "DateField": "周期起始日",
+  "AmountField": "个人总支付_元",
+  "SourceRows": 112,
+  "WeeklyN": 112,
+  "Start": "2024-09-02",
+  "End": "2026-10-25",
+  "Total": "64470.55",
+  "Encoding": "gb18030"
+}

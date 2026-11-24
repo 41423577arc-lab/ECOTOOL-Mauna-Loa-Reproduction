@@ -1,0 +1,160 @@
+function vtboxplot(z, s, Names, win, seriesval)
+% win= 0:  run independently
+% win= 1:  run from testtool call
+% win= 2:  run from menu Series callback
+% win= 3:  run from <<< plotband button
+% win= 4:  run from >>> plotband button
+% win= 5:  run from edit vboxplot uicontrol
+
+% Copyright (C) 2018 Diego J. Pedregal. All rights reserved.
+%
+% This file is part of ECOTOOL.
+% 
+% ECOTOOL is free software: you can redistribute it and/or modify
+% 
+% ECOTOOL is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+
+if nargin< 4, win= 0; end
+
+if nargin< 5, seriesval= 1; end
+
+value= 0;
+if win> 0
+    [z, Names, s, seriesval, h_series, e_handle, value, b_handles]= auxtestGUI;
+    if isempty(value), value= 0; end
+    seriesval= seriesval(1);
+    s= s{1}{1};
+end
+
+[T, m]= size(z);
+if T< m, z= z'; [T, m]= size(z); end
+
+if nargin< 2, s= 12; end
+if isempty(s), s= 12; end
+s= min(s, fix(T/2));
+seriesval= min(seriesval, m);
+
+defNames= char([char(abs('#')*ones(m, 1)) int2str((1 : m)')], 'All');
+if nargin< 3, Names= []; end
+if isempty(Names), Names= defNames; end
+sNames= size(Names, 1);
+if (sNames< m & sNames== 1), Names= divstring(Names); end
+sNames= size(Names, 1);
+if sNames> m+1, Names= Names(1 : m+1, :); end
+if sNames< m+1, Names= char(Names, defNames(sNames + 1 : end, :)); end
+
+if win== 0
+   if strcmp(get(gcf,'name'), 'Text Output Window')
+       figs= findobj(0, 'type', 'figure');
+       fig= size(figs, 1);
+       if strcmp(get(fig,'name'), 'Text Output Window') && fig> 1
+           fig= fig-1;
+       end
+       if fig== 1, figure, else, figure(fig); end
+   end
+%    if strcmp(get(gcf,'name'), 'Text Output Window')
+%        fig= get(0, 'CurrentFigure')-1;
+%        if fig== 0, figure, else, figure(fig); end
+%    end
+   clf;
+   set(gcf, 'number', 'off', 'name', 'Transpose Boxplot Tool', 'userdata', {z, {{s}}, Names}, 'toolbar', 'figure');
+end
+
+% Setting up Menu Series and additional uicontrols
+if win< 2
+	if m>1
+       MENU_H= findall(gcf, 'label', 'Se&ries');
+       if isempty(MENU_H), MENU_H= uimenu('label', 'Se&ries'); end
+       delete(get(MENU_H, 'children'));
+       for i= 1:m
+          uimenu(MENU_H, 'label', Names(i, :), ...
+              'callback', 'vtboxplot([], [], [], 2);');
+       end      
+	end
+	% Setting up additional uicontrols
+    clearscreen;
+    buttonl= uicontrol('units', 'norm', ...
+                       'string', '<<<', ...
+                       'position', [0.3 0.01 0.1 0.05], ...
+                       'enable', 'off', ...
+                       'callback', 'vtboxplot([], [], [], 3);');
+    buttonr= uicontrol('units', 'norm', ...
+                       'string', '>>>', ...
+                       'position', [0.6 0.01 0.1 0.05], ...
+                       'callback', 'vtboxplot([], [], [], 4);');
+    e_handle= uicontrol('style', 'edit', ...
+                     'backg', 'w', ...
+                     'units', 'norm', ...
+                     'string', '0', ...
+                     'position', [0.4 0.01 0.2 0.05], ...
+                     'userdata', [' (out of ' int2str(ceil(T/s))  ')'], ...
+                     'callback', 'vtboxplot([], [], [], 5);');
+         b_handles= [buttonl buttonr];
+end
+MENUopt= findall(gcf, 'label', '&Options');
+if (win== 1)
+	 if isempty(MENUopt), MENUopt= uimenu('label', '&Options', 'userdata', []); end
+     set(MENUopt, 'callback', ['if optionsET({''Enter the seasonal period for Transpose Box Plots [2, Inf):''}, 2, 1);' ...
+           'vtboxplot([], [], [], 2); end']);
+end
+
+% What to do when hitting the additional uicontrols
+maxX= ceil(T/s);
+
+if win>= 2
+    set(e_handle, 'userdata', [' (out of ' int2str(ceil(T/s))  ')']);
+end
+
+if win== 3                            % <<< button
+    value= max(0, value-1);
+elseif win== 4                        % >>> button
+    value= min(value+1, maxX);
+%elseif win== 5
+else
+    value= max(0, value);
+    value= min(value, maxX);
+end
+
+if value== 0
+    set(b_handles(1), 'enable', 'off');
+    set(b_handles(2), 'enable', 'on');
+    str= ['0' get(e_handle, 'userdata')];
+    sample= [];
+else
+    str= [int2str(value) get(e_handle, 'userdata')];
+    set(b_handles, 'enable', 'on');
+    if value== maxX, set(b_handles(2), 'enable', 'off'); end
+    sample= ((value-1)*s+1 : min(value*s, T))';
+end
+set(e_handle, 'string', str)
+
+% Plotting figure
+strtitle= strrep(Names(seriesval, :), ' ', '');
+
+cTs= ceil(T/s);
+zi= transform(reshape([z(:, seriesval); nan*ones(cTs*s-T, 1)], s, cTs));
+t= (1 : s)';
+
+if win< 3
+	HH= plot(t, nanmean(zi')', 'r', t, nanmedian(zi')', 'k', t, [prctileECO(zi', 25)' prctileECO(zi', 75)'], 'r:', t, [nanmin(zi')' nanmax(zi')'], 'b*');
+	set(HH(1:2), 'linew', 2);
+	v= axis; axis([0 t(end)+1 v(3 : 4)]);
+    
+    l_handle= line(t, nan*ones(size(t)), 'color', 'k', 'marker', '.', 'tag', 'this');
+    if value> 0, set(l_handle, 'xdata', t, 'ydata', zi(:, value)); end
+
+	legend(HH([1 2 3 5]), 'Mean', 'Median', '25% and 75% Percentiles', 'Maximum and Minimum', 'location', 'best')
+	
+    title(['Series ' strtitle ': Transpose Box Plot (' int2str(s) ' samples)'])
+    xlabel(['Groups of ' int2str(s) ' samples']);
+    ylabel(['Values of Series ' strtitle])
+else
+    l_handle= findall(gca, 'tag', 'this');
+    if value> 0
+        set(l_handle, 'ydata', zi(:, value), 'xdata', t);
+    else
+        set(l_handle, 'ydata', nan*ones(s, 1), 'xdata', t);
+    end
+end

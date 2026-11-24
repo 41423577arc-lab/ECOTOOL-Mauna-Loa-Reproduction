@@ -1,0 +1,6 @@
+function about
+str= ['Copyright (C) 2019 by Diego J. Pedregal' char(10) ...
+      'E-mail: diego.pedregal@uclm.es' char(10) ...
+      'Web:    https://github.com/djpt999/ECOTOOL'];
+Data=1:64;Data=(Data'*Data)/64;
+msgbox(str, 'About ECOTOOL', 'custom', Data, hot(64));

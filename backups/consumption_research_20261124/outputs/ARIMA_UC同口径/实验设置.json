@@ -1,0 +1,43 @@
+{
+  "target": "个人总支付_元",
+  "data": {
+    "monthly": "UC个人总支出_月度_含美元.csv",
+    "calendar_week": "自然周.xlsx / 02_UC直接建模",
+    "consecutive_seven_days": "连续七天.xlsx / 02_UC直接建模",
+    "october_2026_actual": 3702.17,
+    "cleaning": "直接采用UC源表金额；本次未再次分类、剔除峰值或改动金额"
+  },
+  "arima": {
+    "function": "ECOTOOL modelAUTO",
+    "s": 1,
+    "diffs": 1,
+    "boxcox": 0,
+    "method": "CML",
+    "outlier": "使用ECOTOOL原有默认值 [0,1,1,1,1,0.7,3]；未另行开启异常值调整",
+    "external_inputs": [],
+    "order_and_drift": "每折使用该折历史重新自动识别；最终全训练期另行识别"
+  },
+  "validation": {
+    "scheme": "扩展窗口一步预测；每折重新识别并估计",
+    "monthly_training_lengths": "15至24，共10折",
+    "weekly_training_lengths": "78至107，共30折",
+    "metrics": ["MAE", "RMSE", "sMAPE百分比", "MASE"],
+    "smape": "mean(200*abs(forecast-actual)/(abs(forecast)+abs(actual))); 两者均零记零",
+    "mase": "每折以mean(abs(diff(该折训练金额)))缩放，再对全部折取平均",
+    "baselines": ["上一期朴素预测", "最近三期算术平均"]
+  },
+  "independent_test": {
+    "scheme": "固定原点；训练期结束后一次预测全部测试步；不吸收测试实际值",
+    "monthly_training_n": 25,
+    "weekly_training_n": 108,
+    "monthly_horizon": 1,
+    "weekly_horizon": 5,
+    "calendar_week_october_weights": [0.5714285714285714, 1, 1, 1, 0.8571428571428571],
+    "consecutive_seven_days_october_weights": [0.42857142857142855, 1, 1, 1, 1],
+    "aggregation": "每期预测在期内均匀日分摊后累计2026年10月31天",
+    "calendar_week_fifth_actual": "原完整周期建模表无此期实际值；只预测第五步并按6/7计入十月"
+  },
+  "uc_comparison": "采用用户提供的同频率UC最终模型比较CSV中总支付RW及LLT结果；本次未重估UC",
+  "verification": "ARIMA与UC比较使用同一输入、目标日期、折数、MASE缩放与基准；脚本核验两种基准MAE复现UC结果",
+  "interpretation": "当前已知测试数据后的口径对齐复算；不表述为新开展的盲测"
+}

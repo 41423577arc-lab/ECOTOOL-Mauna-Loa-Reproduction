@@ -1,0 +1,49 @@
+{
+  "updated": "2026-11-22",
+  "authority": "当前用户修正版要求及原字段重新读取；B替代来源已经用户明确确认",
+  "members": {
+    "A": {
+      "Member": "A",
+      "File": "C:\\Users\\aerith\\Desktop\\成员A_周.csv",
+      "Sheet": "CSV",
+      "DateField": "周期起始日",
+      "AmountField": "个人总支付_元",
+      "SourceRows": 112,
+      "WeeklyN": 112,
+      "Start": "2024-09-02",
+      "End": "2026-10-25",
+      "Total": "64470.55",
+      "Encoding": "gb18030"
+    },
+    "B": {
+      "Member": "B",
+      "File": "C:\\Users\\aerith\\Documents\\Codex\\2026-11-18\\referenced-chatgpt-conversation-this-is-an\\work\\abc_final\\B.xlsx",
+      "Sheet": "合并消费明细",
+      "DateField": "周起始日",
+      "AmountField": "净消费（元）",
+      "SourceRows": 2155,
+      "WeeklyN": 112,
+      "Start": "2024-09-02",
+      "End": "2026-10-25",
+      "Total": "114959.44",
+      "ExcludedTransactions": 22,
+      "ApprovedSubstitution": "用户确认用已核验留存B.xlsx；附件B.csv为退款前金额，未用于模型"
+    },
+    "C": {
+      "Member": "C",
+      "File": "C:\\Users\\aerith\\Desktop\\C.xlsx",
+      "Sheet": "03_周期统计",
+      "DateField": "起始日期",
+      "AmountField": "个人总支付_元",
+      "SourceRows": 112,
+      "WeeklyN": 112,
+      "Start": "2024-09-02",
+      "End": "2026-10-25",
+      "Total": "88773.97",
+      "RegularTotalNotUsed": "69730.96",
+      "TotalEqualsRegularPlusIrregular": true
+    }
+  },
+  "current_results": "C:\\Users\\aerith\\Documents\\Codex\\2026-11-18\\referenced-chatgpt-conversation-this-is-an\\outputs\\ABC周消费_ARIMA_修正版_20261122",
+  "note": "此次成员A不是旧A.csv；成员C使用03_周期统计的个人总支付，不是常规支付。旧A/B同源结论仅适用于上一轮旧A.csv，不适用于此次新成员A_周.csv。"
+}

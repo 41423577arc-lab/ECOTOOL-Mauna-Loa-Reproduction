@@ -1,0 +1,11 @@
+﻿Person,ARIMA,Folds,ECOTOOLSpecification
+A,"ARIMA(2,1,3) 无漂移",3,(1+a1*B+a2*B2+a3*B3)/(1+c1*B+c2*B2)(1-B)
+A,"ARIMA(0,1,1) 带漂移",26,(1+a1*B)/(1-B) | Constant/(1-B)
+A,"ARIMA(1,1,1) 带漂移",1,(1+a1*B)/(1+c1*B)(1-B) | Constant/(1-B)
+B,"ARIMA(2,1,3) 带漂移",2,(1+a1*B+a2*B2+a3*B3)/(1+c1*B+c2*B2)(1-B) | Constant/(1-B)
+B,"ARIMA(2,1,3) 无漂移",1,(1+a1*B+a2*B2+a3*B3)/(1+c1*B+c2*B2)(1-B)
+B,"ARIMA(0,1,1) 带漂移",27,(1+a1*B)/(1-B) | Constant/(1-B)
+C,"ARIMA(2,1,1) 带漂移",3,(1+a1*B)/(1+c1*B+c2*B2)(1-B) | Constant/(1-B)
+C,"ARIMA(2,1,3) 带漂移",2,(1+a1*B+a2*B2+a3*B3)/(1+c1*B+c2*B2)(1-B) | Constant/(1-B)
+C,"ARIMA(0,1,1) 带漂移",23,(1+a1*B)/(1-B) | Constant/(1-B)
+C,"ARIMA(1,1,1) 带漂移",2,(1+a1*B)/(1+c1*B)(1-B) | Constant/(1-B)

@@ -1,0 +1,14 @@
+{
+  "Member": "B",
+  "File": "C:\\Users\\aerith\\Documents\\Codex\\2026-11-18\\referenced-chatgpt-conversation-this-is-an\\work\\abc_final\\B.xlsx",
+  "Sheet": "合并消费明细",
+  "DateField": "周起始日",
+  "AmountField": "净消费（元）",
+  "SourceRows": 2155,
+  "WeeklyN": 112,
+  "Start": "2024-09-02",
+  "End": "2026-10-25",
+  "Total": "114959.44",
+  "ExcludedTransactions": 22,
+  "ApprovedSubstitution": "用户确认用已核验留存B.xlsx；附件B.csv为退款前金额，未用于模型"
+}

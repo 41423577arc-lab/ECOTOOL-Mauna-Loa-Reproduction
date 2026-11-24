@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-22",
+  "authoritative_sources": {
+    "A": "C:\\Users\\aerith\\Desktop\\A.csv",
+    "B": "C:\\Users\\aerith\\Desktop\\B.xlsx",
+    "C": "C:\\Users\\aerith\\Desktop\\C.csv"
+  },
+  "source_sha256": {
+    "A": "aebd5b6c76aaceb1311e6a696754310390a91e56526f416092d10eb57f5847c5",
+    "B": "27093b8b7259dd6b9abb97d8ba367bf82a0bd5be7b8f3cafecb0eeebdd4af9b0",
+    "C": "9eeaacdf30e50ccf87d0b42f455ae2d84cc83b6d6af652defb51a97827802d70"
+  },
+  "identity_rule": "以用户本轮提供的A.csv B.xlsx C.csv对应A B C，替代此前推断归属。",
+  "input_details": {
+    "A": {
+      "frequency": "自然周",
+      "rows": 112,
+      "field": "个人总支付_元",
+      "encoding": "gb18030"
+    },
+    "B": {
+      "frequency": "交易明细",
+      "sheet": "合并消费明细",
+      "field": "净消费（元）",
+      "rows": 2155,
+      "first": "2024-09-01",
+      "last": "2026-10-31"
+    },
+    "C": {
+      "frequency": "日",
+      "rows": 791,
+      "field": "总支出_元",
+      "encoding": "gb18030"
+    }
+  },
+  "common_frequency": "自然周 周一至周日",
+  "input_periods": 112,
+  "input_start": "2024-09-02",
+  "input_end": "2026-10-25",
+  "train_periods": 108,
+  "train_end": "2026-09-27",
+  "rolling_training_lengths": [
+    78,
+    107
+  ],
+  "rolling_folds": 30,
+  "rolling_target_start": "2026-03-02",
+  "rolling_target_end": "2026-09-21",
+  "test_periods": 4,
+  "test_start": "2026-09-28",
+  "test_end": "2026-10-25",
+  "function": "MATLAB ECOTOOL modelAUTO",
+  "parameters": {
+    "u": [],
+    "s": 1,
+    "diffs": 1,
+    "boxcox": 0,
+    "method": "CML",
+    "outlier": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.7,
+      3
+    ]
+  },
+  "rolling_forecast_horizon": 1,
+  "fixed_forecast_horizon": 4,
+  "order_policy": "每折与全训练期分别自动识别阶数及漂移，不强制相同阶数。",
+  "metrics": [
+    "MAE",
+    "RMSE",
+    "sMAPE 200x",
+    "MASE"
+  ],
+  "processing": "A保留原周金额；B按交易日期汇总净消费；C按日期汇总给定总支出。共同日期范围外的数据不进入模型。不删尖峰、不做对数或Box-Cox、不额外启用自动异常调整。",
+  "scope": "统一给定金额序列的聚合、划分、选模与评价；A、C无逐笔清洗资料，不能据此证明上游退款、转账等分类完全相同。",
+  "A_B_equal_weeks": 110,
+  "A_B_difference_weeks": [
+    {
+      "start": "2025-04-07",
+      "A": 510.09,
+      "B": 435.09
+    },
+    {
+      "start": "2026-09-28",
+      "A": 1274.57,
+      "B": 1268.57
+    }
+  ],
+  "test_totals": {
+    "A": 4325.0,
+    "B": 4319.0,
+    "C": 4170.24
+  },
+  "weekly_sha256": {
+    "A": "f97e14f47de0fddded8ec8c5a942c4746fba43f1e756db0bca602c142778c3cd",
+    "B": "a9a9f1ae78cb07fc3753610f813ee1ea7c5674d897e6aeb7e77522ba1218a625",
+    "C": "57e9512261f9ba3729f6bce23e4b538496fd11cae468d6e395eb7c5593018ccd"
+  }
+}

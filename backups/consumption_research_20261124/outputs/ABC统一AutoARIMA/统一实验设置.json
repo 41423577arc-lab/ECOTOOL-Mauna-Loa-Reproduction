@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-22",
+  "persons": {
+    "A": "最新附件 文件名虽以C开头仍按A",
+    "B": "用户本人最初合并账单",
+    "C": "此前提供的原始日账单"
+  },
+  "common_frequency": "自然周 周一至周日",
+  "input_periods": 112,
+  "input_start": "2024-09-02",
+  "input_end": "2026-10-25",
+  "train_periods": 108,
+  "train_end": "2026-09-27",
+  "rolling_training_lengths": [
+    78,
+    107
+  ],
+  "rolling_folds": 30,
+  "rolling_target_start": "2026-03-02",
+  "rolling_target_end": "2026-09-21",
+  "test_periods": 4,
+  "test_start": "2026-09-28",
+  "test_end": "2026-10-25",
+  "function": "ECOTOOL modelAUTO",
+  "parameters": {
+    "s": 1,
+    "diffs": 1,
+    "boxcox": 0,
+    "method": "CML",
+    "external_inputs": [],
+    "outlier": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      0.7,
+      3
+    ]
+  },
+  "rolling_forecast_horizon": 1,
+  "fixed_forecast_horizon": 4,
+  "order": "each fit automatically identifies ARIMA order and drift",
+  "metrics": [
+    "MAE",
+    "RMSE",
+    "sMAPE 200x",
+    "MASE"
+  ],
+  "cleaning": "直接采用已整理金额 不做变换 不删峰值 不额外处理异常值 B和C按7天相加 A沿用自然周金额",
+  "upstream_scope": "A没有原始流水与日账单，不能复核退款、转账等上游分类是否与B和C相同；本次统一的是所给金额序列的聚合及建模流程。B使用原始合并账单最终净额，C使用原始日账单，不使用此前UC聚合版。",
+  "sources": {
+    "A": "work/A_个人总支付_自然周.csv",
+    "B": "work/merged-data.json details 金额列",
+    "C": [
+      "work/newbill_train.csv",
+      "work/newbill_test.csv"
+    ]
+  },
+  "sha256": {
+    "A": "f97e14f47de0fddded8ec8c5a942c4746fba43f1e756db0bca602c142778c3cd",
+    "B": "a9a9f1ae78cb07fc3753610f813ee1ea7c5674d897e6aeb7e77522ba1218a625",
+    "C": "57e9512261f9ba3729f6bce23e4b538496fd11cae468d6e395eb7c5593018ccd"
+  },
+  "test_totals": {
+    "A": 4325.0,
+    "B": 4319.0,
+    "C": 4170.24
+  }
+}

@@ -1,0 +1,3 @@
+raw range 1352.73 9938.26 | transformed range 20.05794 35.460858 | lambda 0.24785156
+model y0 range 20.05794 35.460858 | stdpy first 28.527597 | res std 2.7998016
+Box-Cox inverse results 8652.06975103 4934.34113885 3590.66355330

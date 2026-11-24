@@ -1,0 +1,9 @@
+function aboutWINDOWET
+
+str= ['This is part of ECOTOOL.' char(10) ...
+        'For further information contact the author:' char(10) ...
+        'Diego.Pedregal@uclm.es' char(10) ...
+        'Copyright (c) 2018 by Diego J. Pedregal.'];
+Data=1:64;Data=(Data'*Data)/64;
+msgbox(str, 'About E.T.', 'custom', Data, hot(64));
+ 

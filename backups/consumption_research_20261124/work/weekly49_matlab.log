@@ -1,0 +1,39 @@
+1/52 2025-08-31 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+2/52 2025-09-07 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+3/52 2025-09-14 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+4/52 2025-09-21 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+5/52 2025-09-28 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+6/52 2025-10-05 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+7/52 2025-10-12 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+8/52 2025-10-19 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+9/52 2025-10-26 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+10/52 2025-11-02 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+11/52 2025-11-09 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+12/52 2025-11-16 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+13/52 2025-11-23 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+14/52 2025-11-30 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+15/52 2025-12-07 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+16/52 2025-12-14 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+17/52 2025-12-21 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+18/52 2025-12-28 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+19/52 2026-01-04 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+20/52 2026-01-11 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+21/52 2026-01-18 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+22/52 2026-01-25 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+23/52 2026-02-01 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+24/52 2026-02-08 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+25/52 2026-02-15 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+26/52 2026-02-22 | (1+a1*B)/(1-B)Constant/(1-B) |  | Could not verify model output scale.
+27/52 2026-03-01 | (1+a1*B+a2*B2+a3*B3)/(1+c1*B+c2*B2)(1-B)Constant/(1-B)                           |  | Could not verify model output scale.
+28/52 2026-03-08 | (1+a1*B+a2*B2+a3*B3)/(1+c1*B+c2*B2)(1-B)Constant/(1-B)                           |  | Could not verify model output scale.
+29/52 2026-03-15 | (1+a1*B+a2*B2+a3*B3)/(1+c1*B+c2*B2)(1-B) |  | Could not verify model output scale.
+{错误使用 tabular/vertcat (第 209 行)
+当使用 vertcat 串联表变量 'Specification' 时发生错误。
+
+出错 weekly49_matlab (第 48 行)
+    output = [output; table(repmat(origin, steps, 1), (1:steps)', repmat(numel(history), steps, 1), ...
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+原因:
+    错误使用 vertcat
+    要串联的数组的维度不一致。
+} 

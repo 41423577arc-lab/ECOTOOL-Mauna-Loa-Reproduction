@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-22",
+  "sources": [
+    {
+      "Member": "A",
+      "File": "C:\\Users\\aerith\\Desktop\\成员A_周.csv",
+      "Sheet": "CSV",
+      "DateField": "周期起始日",
+      "AmountField": "个人总支付_元",
+      "SourceRows": 112,
+      "WeeklyN": 112,
+      "Start": "2024-09-02",
+      "End": "2026-10-25",
+      "Total": "64470.55",
+      "Encoding": "gb18030"
+    },
+    {
+      "Member": "B",
+      "File": "C:\\Users\\aerith\\Documents\\Codex\\2026-11-18\\referenced-chatgpt-conversation-this-is-an\\work\\abc_final\\B.xlsx",
+      "Sheet": "合并消费明细",
+      "DateField": "周起始日",
+      "AmountField": "净消费（元）",
+      "SourceRows": 2155,
+      "WeeklyN": 112,
+      "Start": "2024-09-02",
+      "End": "2026-10-25",
+      "Total": "114959.44",
+      "ExcludedTransactions": 22,
+      "ApprovedSubstitution": "用户确认用已核验留存B.xlsx；附件B.csv为退款前金额，未用于模型"
+    },
+    {
+      "Member": "C",
+      "File": "C:\\Users\\aerith\\Desktop\\C.xlsx",
+      "Sheet": "03_周期统计",
+      "DateField": "起始日期",
+      "AmountField": "个人总支付_元",
+      "SourceRows": 112,
+      "WeeklyN": 112,
+      "Start": "2024-09-02",
+      "End": "2026-10-25",
+      "Total": "88773.97",
+      "RegularTotalNotUsed": "69730.96",
+      "TotalEqualsRegularPlusIrregular": true
+    }
+  ],
+  "source_sha256": {
+    "A": "5824a58af075550a0ef8384c9d3f3966f89d4120b610b501cb5f80b71cc35ca7",
+    "B": "27093b8b7259dd6b9abb97d8ba367bf82a0bd5be7b8f3cafecb0eeebdd4af9b0",
+    "C": "bdd784a5688b133f5309614cf09f376211c18ce17b66e839bd0c88f6598d01d2"
+  },
+  "pairwise_equal_weeks": {
+    "AB": 0,
+    "AC": 0,
+    "BC": 0
+  },
+  "source_identity": "本轮新成员A_周.csv与C.xlsx替代旧同名标签数据；B使用用户已确认的留存工作簿净额。",
+  "parameters": {
+    "function": "MATLAB ECOTOOL modelAUTO",
+    "u": [],
+    "s": 1,
+    "diffs": 1,
+    "boxcox": 0,
+    "outlier": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.7,
+      3
+    ],
+    "method": "CML"
+  },
+  "train_weeks": 108,
+  "train_end": "2026-09-27",
+  "rolling_folds": 30,
+  "rolling_training_lengths": [
+    78,
+    107
+  ],
+  "rolling_targets": [
+    "2026-03-02",
+    "2026-09-21"
+  ],
+  "test_weeks": 4,
+  "test_interval": [
+    "2026-09-28",
+    "2026-10-25"
+  ],
+  "baseline_rules": {
+    "Naive": "滚动用历史最后一期；固定原点4步均取训练最后一期。",
+    "HistoricalMean": "滚动每折重算该折全部训练均值；固定原点4步均取108周训练均值。"
+  },
+  "metrics": [
+    "MAE",
+    "RMSE",
+    "sMAPE 200x",
+    "MASE per-fold training scale"
+  ],
+  "processing": "仅统一周期和金额字段，使用原金额，不删除尖峰、不变换、不额外调异常；日期和金额先验证再与提示统计值比对。",
+  "residual_diagnostics": "全108周ARIMA训练拟合的一步创新；仅取有限值；ACF 12阶、经验标准化直方图与正态QQ图、Ljung-Box 6/12阶及Jarque-Bera。",
+  "limitations": "A/C为已聚合源表，B为净消费明细；相同建模流程不代表可重新核验全部上游逐笔分类。测试只有4周，残差未拒绝检验不能证明白噪声或正态。"
+}
