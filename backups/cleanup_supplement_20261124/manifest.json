@@ -1,0 +1,854 @@
+[
+  {
+    "source": "C:\\Users\\aerith\\Desktop\\成员A_周.csv",
+    "path": "Desktop/成员A_周.csv",
+    "bytes": 2096,
+    "sha256": "5824a58af075550a0ef8384c9d3f3966f89d4120b610b501cb5f80b71cc35ca7"
+  },
+  {
+    "source": "C:\\Users\\aerith\\Desktop\\B.csv",
+    "path": "Desktop/B.csv",
+    "bytes": 2186,
+    "sha256": "42918c8b5c825078cd397b4b5c6885e16e4bb63a49be82f14f90c06766411196"
+  },
+  {
+    "source": "C:\\Users\\aerith\\Desktop\\C.xlsx",
+    "path": "Desktop/C.xlsx",
+    "bytes": 226231,
+    "sha256": "bdd784a5688b133f5309614cf09f376211c18ce17b66e839bd0c88f6598d01d2"
+  },
+  {
+    "source": "C:\\Users\\aerith\\Desktop\\三位成员周消费_ARIMA与基准预测报告.docx",
+    "path": "Desktop/三位成员周消费_ARIMA与基准预测报告.docx",
+    "bytes": 1337227,
+    "sha256": "f94352d5d2b660f53763ec2ef887e977c616e17db8c0167e76e44f712a606cd8"
+  },
+  {
+    "source": "C:\\Users\\aerith\\Desktop\\从论文复现到消费预测.pptx",
+    "path": "Desktop/从论文复现到消费预测.pptx",
+    "bytes": 3296912,
+    "sha256": "fb436d6e424dd778a6a9f46c7f4955066da2e4f854769938399746235d4bf615"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\2024年9月至2026年9月个人总支付趋势 (1).png",
+    "path": "Temp/2024年9月至2026年9月个人总支付趋势 (1).png",
+    "bytes": 60222,
+    "sha256": "5cd4f52cc4c60c4d3590d93b1081293cd49590aa6f9b5c4266cbe91bec3cf90a"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\2024年9月至2026年9月个人总支付趋势.png",
+    "path": "Temp/2024年9月至2026年9月个人总支付趋势.png",
+    "bytes": 60222,
+    "sha256": "5cd4f52cc4c60c4d3590d93b1081293cd49590aa6f9b5c4266cbe91bec3cf90a"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\2024年9月至2026年9月个人总支付趋势_2 (1).png",
+    "path": "Temp/2024年9月至2026年9月个人总支付趋势_2 (1).png",
+    "bytes": 127140,
+    "sha256": "0a009316c7dcc60c6802ea58bf57aab27cc15772ba70fc974bdcb094827b4aa0"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\2024年9月至2026年9月个人总支付趋势_2.png",
+    "path": "Temp/2024年9月至2026年9月个人总支付趋势_2.png",
+    "bytes": 127140,
+    "sha256": "0a009316c7dcc60c6802ea58bf57aab27cc15772ba70fc974bdcb094827b4aa0"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\2026年10月个人总支付预测与真实值对比 (1).png",
+    "path": "Temp/2026年10月个人总支付预测与真实值对比 (1).png",
+    "bytes": 73352,
+    "sha256": "ad6f17f01360818713a5b2e7637ba3ce86c8c9c01768e6b1b4a4bf4205ec0ff2"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\2026年10月个人总支付预测与真实值对比.png",
+    "path": "Temp/2026年10月个人总支付预测与真实值对比.png",
+    "bytes": 73352,
+    "sha256": "ad6f17f01360818713a5b2e7637ba3ce86c8c9c01768e6b1b4a4bf4205ec0ff2"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\codex-clipboard-04045373-1aa6-4444-bf8b-ad5757b70637.png",
+    "path": "Temp/codex-clipboard-04045373-1aa6-4444-bf8b-ad5757b70637.png",
+    "bytes": 94285,
+    "sha256": "1cb421e590f6612b46d7378c897e12c1bd28b27919fc88b46fa3c030ecc16115"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\codex-clipboard-325438e3-aa98-464e-a459-12ea1b14821f.png",
+    "path": "Temp/codex-clipboard-325438e3-aa98-464e-a459-12ea1b14821f.png",
+    "bytes": 163213,
+    "sha256": "0109876912df82be02cc0c98eafc57e08b85a6c33c48926173df93734d656282"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\codex-clipboard-630ff245-7b1c-4075-a68b-962e7a2d367f.png",
+    "path": "Temp/codex-clipboard-630ff245-7b1c-4075-a68b-962e7a2d367f.png",
+    "bytes": 206155,
+    "sha256": "807409ba54e7008f42edb0b0159c7e54ed95ea97780aa8ee335a13cd2fc2cdc8"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\codex-clipboard-9ed9778f-a461-40dd-ba4e-06eec24f95e4.png",
+    "path": "Temp/codex-clipboard-9ed9778f-a461-40dd-ba4e-06eec24f95e4.png",
+    "bytes": 201674,
+    "sha256": "ac081b7b45c78425c291d9919935b6ae17eedd6c0bd7c09ec15fdaec7245c5ca"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\codex-clipboard-a39ed1a2-a596-48b4-b2b6-ca3a5b599fdb.png",
+    "path": "Temp/codex-clipboard-a39ed1a2-a596-48b4-b2b6-ca3a5b599fdb.png",
+    "bytes": 191392,
+    "sha256": "dc8a0ac61d849654a193b369df6b78626c47bdbd2256f46db5acaca929dab0a2"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\三种频率累计预测与十月真实总支付 (1).png",
+    "path": "Temp/三种频率累计预测与十月真实总支付 (1).png",
+    "bytes": 100688,
+    "sha256": "9b7054fcda057f6996327ae122a52011a290bdeb146b9654e68f6185cbdaad4b"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\三种频率累计预测与十月真实总支付.png",
+    "path": "Temp/三种频率累计预测与十月真实总支付.png",
+    "bytes": 100688,
+    "sha256": "9b7054fcda057f6996327ae122a52011a290bdeb146b9654e68f6185cbdaad4b"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\三种频率累计预测与十月真实总支付_2 (1).png",
+    "path": "Temp/三种频率累计预测与十月真实总支付_2 (1).png",
+    "bytes": 104346,
+    "sha256": "2188c5da090cadc4ac8e70bcb2bd169ef98a6d0c7d9e5980f8d61c3f3ea34315"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\三种频率累计预测与十月真实总支付_2.png",
+    "path": "Temp/三种频率累计预测与十月真实总支付_2.png",
+    "bytes": 104346,
+    "sha256": "2188c5da090cadc4ac8e70bcb2bd169ef98a6d0c7d9e5980f8d61c3f3ea34315"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\个人总支付与常规支付对比 (1).png",
+    "path": "Temp/个人总支付与常规支付对比 (1).png",
+    "bytes": 72934,
+    "sha256": "7c440626f57e223d9346f284b7fc075b407a1f5de241a2fd46a395e786d2e039"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\个人总支付与常规支付对比.png",
+    "path": "Temp/个人总支付与常规支付对比.png",
+    "bytes": 72934,
+    "sha256": "7c440626f57e223d9346f284b7fc075b407a1f5de241a2fd46a395e786d2e039"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\个人总支付与常规支付对比_2 (1).png",
+    "path": "Temp/个人总支付与常规支付对比_2 (1).png",
+    "bytes": 160902,
+    "sha256": "5a63434fc448deb3ffdc317448ad05a501de29bb854e483574d7f709e49c154a"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\个人总支付与常规支付对比_2.png",
+    "path": "Temp/个人总支付与常规支付对比_2.png",
+    "bytes": 160902,
+    "sha256": "5a63434fc448deb3ffdc317448ad05a501de29bb854e483574d7f709e49c154a"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\个人总支付历史与2026年10月预测 (1).png",
+    "path": "Temp/个人总支付历史与2026年10月预测 (1).png",
+    "bytes": 144436,
+    "sha256": "b61ffcba08f47d7d1e5fd60d1d3a0baeae428f09cefe99696a3c9028c1a0752b"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\个人总支付历史与2026年10月预测.png",
+    "path": "Temp/个人总支付历史与2026年10月预测.png",
+    "bytes": 144436,
+    "sha256": "b61ffcba08f47d7d1e5fd60d1d3a0baeae428f09cefe99696a3c9028c1a0752b"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\个人连续七天周期支付的ACF与PACF分析 (1).png",
+    "path": "Temp/个人连续七天周期支付的ACF与PACF分析 (1).png",
+    "bytes": 178150,
+    "sha256": "98c93b9ba3e38fbca3af1a74aebe5ac67f98e82d0291f4b202e01fc39d5ebd18"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\个人连续七天周期支付的ACF与PACF分析.png",
+    "path": "Temp/个人连续七天周期支付的ACF与PACF分析.png",
+    "bytes": 178150,
+    "sha256": "98c93b9ba3e38fbca3af1a74aebe5ac67f98e82d0291f4b202e01fc39d5ebd18"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\个人连续七天周期支付的Yule-Walker偏自相关分析 (1).png",
+    "path": "Temp/个人连续七天周期支付的Yule-Walker偏自相关分析 (1).png",
+    "bytes": 122874,
+    "sha256": "f4dda92d6dc14181f3376f744f9820549a1ad1626d0ee97b0824f2d1f6c4bf07"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\个人连续七天周期支付的Yule-Walker偏自相关分析.png",
+    "path": "Temp/个人连续七天周期支付的Yule-Walker偏自相关分析.png",
+    "bytes": 122874,
+    "sha256": "f4dda92d6dc14181f3376f744f9820549a1ad1626d0ee97b0824f2d1f6c4bf07"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT一步预测残差诊断 (1).png",
+    "path": "Temp/常规支付-LLT一步预测残差诊断 (1).png",
+    "bytes": 370619,
+    "sha256": "b0216267221364436cb3525a2d795a958ca60cff4ca8342053846e47e59494cc"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT一步预测残差诊断 (21) (1).png",
+    "path": "Temp/常规支付-LLT一步预测残差诊断 (21) (1).png",
+    "bytes": 407244,
+    "sha256": "93373c8a2105c061a56464e965cc4e4e8f2a375c4c2f1ccac7fcfde64dfa8db1"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT一步预测残差诊断 (21).png",
+    "path": "Temp/常规支付-LLT一步预测残差诊断 (21).png",
+    "bytes": 407244,
+    "sha256": "93373c8a2105c061a56464e965cc4e4e8f2a375c4c2f1ccac7fcfde64dfa8db1"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT一步预测残差诊断 (70) (1).png",
+    "path": "Temp/常规支付-LLT一步预测残差诊断 (70) (1).png",
+    "bytes": 406910,
+    "sha256": "98743181bc36f1b0bfd4f7f2a8d404c9824100e180feb53372e2df5c89e4e1b1"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT一步预测残差诊断 (70).png",
+    "path": "Temp/常规支付-LLT一步预测残差诊断 (70).png",
+    "bytes": 406910,
+    "sha256": "98743181bc36f1b0bfd4f7f2a8d404c9824100e180feb53372e2df5c89e4e1b1"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT一步预测残差诊断.png",
+    "path": "Temp/常规支付-LLT一步预测残差诊断.png",
+    "bytes": 370619,
+    "sha256": "b0216267221364436cb3525a2d795a958ca60cff4ca8342053846e47e59494cc"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT未观测成分分解 (1).png",
+    "path": "Temp/常规支付-LLT未观测成分分解 (1).png",
+    "bytes": 214157,
+    "sha256": "1760c74e656ba84bea6968059efad2bfd830ba4389d09e3f2cb59be126cd581d"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT未观测成分分解 (23) (1).png",
+    "path": "Temp/常规支付-LLT未观测成分分解 (23) (1).png",
+    "bytes": 264895,
+    "sha256": "0de5b4de80d6435be1bc8d145a0dea55026cf5750950364996116029eac9a917"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT未观测成分分解 (23).png",
+    "path": "Temp/常规支付-LLT未观测成分分解 (23).png",
+    "bytes": 264895,
+    "sha256": "0de5b4de80d6435be1bc8d145a0dea55026cf5750950364996116029eac9a917"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT未观测成分分解 (72) (1).png",
+    "path": "Temp/常规支付-LLT未观测成分分解 (72) (1).png",
+    "bytes": 263568,
+    "sha256": "245adb98be2ee190392917bbbc1421dd94655ef3c44ecf33a9acde08d5d2faf4"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT未观测成分分解 (72).png",
+    "path": "Temp/常规支付-LLT未观测成分分解 (72).png",
+    "bytes": 263568,
+    "sha256": "245adb98be2ee190392917bbbc1421dd94655ef3c44ecf33a9acde08d5d2faf4"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT未观测成分分解.png",
+    "path": "Temp/常规支付-LLT未观测成分分解.png",
+    "bytes": 214157,
+    "sha256": "1760c74e656ba84bea6968059efad2bfd830ba4389d09e3f2cb59be126cd581d"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT观测与样本内一步预测拟合对比 (1).png",
+    "path": "Temp/常规支付-LLT观测与样本内一步预测拟合对比 (1).png",
+    "bytes": 174353,
+    "sha256": "cb947761001a5007bb9568330d864272b0bcda6356ce033a2e70a49e6bb383c9"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT观测与样本内一步预测拟合对比 (25) (1).png",
+    "path": "Temp/常规支付-LLT观测与样本内一步预测拟合对比 (25) (1).png",
+    "bytes": 236480,
+    "sha256": "04c3429dea2e7fe6f03883a13152a4b918cfc618ef93afff1f0d86bc30166c45"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT观测与样本内一步预测拟合对比 (25).png",
+    "path": "Temp/常规支付-LLT观测与样本内一步预测拟合对比 (25).png",
+    "bytes": 236480,
+    "sha256": "04c3429dea2e7fe6f03883a13152a4b918cfc618ef93afff1f0d86bc30166c45"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT观测与样本内一步预测拟合对比 (74) (1).png",
+    "path": "Temp/常规支付-LLT观测与样本内一步预测拟合对比 (74) (1).png",
+    "bytes": 238655,
+    "sha256": "f132c49e4e8d1dd660819960542a8f5fd879dd2d807b58636dd4c5f96fd6b07d"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT观测与样本内一步预测拟合对比 (74).png",
+    "path": "Temp/常规支付-LLT观测与样本内一步预测拟合对比 (74).png",
+    "bytes": 238655,
+    "sha256": "f132c49e4e8d1dd660819960542a8f5fd879dd2d807b58636dd4c5f96fd6b07d"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-LLT观测与样本内一步预测拟合对比.png",
+    "path": "Temp/常规支付-LLT观测与样本内一步预测拟合对比.png",
+    "bytes": 174353,
+    "sha256": "cb947761001a5007bb9568330d864272b0bcda6356ce033a2e70a49e6bb383c9"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW一步预测残差诊断 (1).png",
+    "path": "Temp/常规支付-RW一步预测残差诊断 (1).png",
+    "bytes": 374143,
+    "sha256": "95ad5df780441c876bcb9f5db464de3bb1b65141688d4163801d91f4d7786d6c"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW一步预测残差诊断 (27) (1).png",
+    "path": "Temp/常规支付-RW一步预测残差诊断 (27) (1).png",
+    "bytes": 407418,
+    "sha256": "abd55cefa1a5cb7751ac86a79bbae97d6a8de729d58f9332d0c2f261e7474f20"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW一步预测残差诊断 (27).png",
+    "path": "Temp/常规支付-RW一步预测残差诊断 (27).png",
+    "bytes": 407418,
+    "sha256": "abd55cefa1a5cb7751ac86a79bbae97d6a8de729d58f9332d0c2f261e7474f20"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW一步预测残差诊断 (76) (1).png",
+    "path": "Temp/常规支付-RW一步预测残差诊断 (76) (1).png",
+    "bytes": 411121,
+    "sha256": "7773f5738e80873fdb985d1f462b434caf0f931aadc610987dfcbdd29a6ae8e1"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW一步预测残差诊断 (76).png",
+    "path": "Temp/常规支付-RW一步预测残差诊断 (76).png",
+    "bytes": 411121,
+    "sha256": "7773f5738e80873fdb985d1f462b434caf0f931aadc610987dfcbdd29a6ae8e1"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW一步预测残差诊断.png",
+    "path": "Temp/常规支付-RW一步预测残差诊断.png",
+    "bytes": 374143,
+    "sha256": "95ad5df780441c876bcb9f5db464de3bb1b65141688d4163801d91f4d7786d6c"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW未观测成分分解 (1).png",
+    "path": "Temp/常规支付-RW未观测成分分解 (1).png",
+    "bytes": 217113,
+    "sha256": "dbb469113c5b67e0fe49ba951141f76585cbfc81a55ca383f55af7e07f75a5e2"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW未观测成分分解 (29) (1).png",
+    "path": "Temp/常规支付-RW未观测成分分解 (29) (1).png",
+    "bytes": 258647,
+    "sha256": "12a29cb23dd00ad557c56f541c9f3c16bc14de38d86484a750cc496392f4625e"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW未观测成分分解 (29).png",
+    "path": "Temp/常规支付-RW未观测成分分解 (29).png",
+    "bytes": 258647,
+    "sha256": "12a29cb23dd00ad557c56f541c9f3c16bc14de38d86484a750cc496392f4625e"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW未观测成分分解 (78) (1).png",
+    "path": "Temp/常规支付-RW未观测成分分解 (78) (1).png",
+    "bytes": 265726,
+    "sha256": "a234cb3e23c83ee62dba48709821ea71d8364a6a1dddf2a1b13ba08476c27fdd"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW未观测成分分解 (78).png",
+    "path": "Temp/常规支付-RW未观测成分分解 (78).png",
+    "bytes": 265726,
+    "sha256": "a234cb3e23c83ee62dba48709821ea71d8364a6a1dddf2a1b13ba08476c27fdd"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW未观测成分分解.png",
+    "path": "Temp/常规支付-RW未观测成分分解.png",
+    "bytes": 217113,
+    "sha256": "dbb469113c5b67e0fe49ba951141f76585cbfc81a55ca383f55af7e07f75a5e2"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW观测与样本内一步预测拟合对比 (1).png",
+    "path": "Temp/常规支付-RW观测与样本内一步预测拟合对比 (1).png",
+    "bytes": 166859,
+    "sha256": "15990b6f9cf6d37b22ffb90037c9ba9b89283bf4e6c635ca030ea8b8c311ba80"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW观测与样本内一步预测拟合对比 (31) (1).png",
+    "path": "Temp/常规支付-RW观测与样本内一步预测拟合对比 (31) (1).png",
+    "bytes": 221574,
+    "sha256": "30f2e84ab2aecbc1739d2a19dc26b152749b7579d7897a942416efa8184986b4"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW观测与样本内一步预测拟合对比 (31).png",
+    "path": "Temp/常规支付-RW观测与样本内一步预测拟合对比 (31).png",
+    "bytes": 221574,
+    "sha256": "30f2e84ab2aecbc1739d2a19dc26b152749b7579d7897a942416efa8184986b4"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW观测与样本内一步预测拟合对比 (80) (1).png",
+    "path": "Temp/常规支付-RW观测与样本内一步预测拟合对比 (80) (1).png",
+    "bytes": 222709,
+    "sha256": "3277122b6f0c34c1c137860fc2f8972a5aeec88d34e2cb859fd12a68af6feb9c"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW观测与样本内一步预测拟合对比 (80).png",
+    "path": "Temp/常规支付-RW观测与样本内一步预测拟合对比 (80).png",
+    "bytes": 222709,
+    "sha256": "3277122b6f0c34c1c137860fc2f8972a5aeec88d34e2cb859fd12a68af6feb9c"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付-RW观测与样本内一步预测拟合对比.png",
+    "path": "Temp/常规支付-RW观测与样本内一步预测拟合对比.png",
+    "bytes": 166859,
+    "sha256": "15990b6f9cf6d37b22ffb90037c9ba9b89283bf4e6c635ca030ea8b8c311ba80"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付扩展窗口滚动预测对比 (1).png",
+    "path": "Temp/常规支付扩展窗口滚动预测对比 (1).png",
+    "bytes": 207949,
+    "sha256": "ac8b327f2421c3195f59a130037019dfd6963bcf442a4156a984a5a6a7c6b6dd"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付扩展窗口滚动预测对比.png",
+    "path": "Temp/常规支付扩展窗口滚动预测对比.png",
+    "bytes": 207949,
+    "sha256": "ac8b327f2421c3195f59a130037019dfd6963bcf442a4156a984a5a6a7c6b6dd"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付滚动预测误差指标比较 (1).png",
+    "path": "Temp/常规支付滚动预测误差指标比较 (1).png",
+    "bytes": 76079,
+    "sha256": "92f2e67cd9ae5b998580cb98fabe4f1469c8a4ba7b1cb479e75f4b4cffe1d45a"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\常规支付滚动预测误差指标比较.png",
+    "path": "Temp/常规支付滚动预测误差指标比较.png",
+    "bytes": 76079,
+    "sha256": "92f2e67cd9ae5b998580cb98fabe4f1469c8a4ba7b1cb479e75f4b4cffe1d45a"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT一步预测残差诊断 (1).png",
+    "path": "Temp/总支付-LLT一步预测残差诊断 (1).png",
+    "bytes": 351368,
+    "sha256": "04b411270a721137170ab12662917d4bbdda4af5d1a47796b46599b58b17d0d3"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT一步预测残差诊断 (33) (1).png",
+    "path": "Temp/总支付-LLT一步预测残差诊断 (33) (1).png",
+    "bytes": 385098,
+    "sha256": "811e86d85e2431a387ed37bcdc6b9c1e1a6a69a90a7f0a5859772c9918fb7bfe"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT一步预测残差诊断 (33).png",
+    "path": "Temp/总支付-LLT一步预测残差诊断 (33).png",
+    "bytes": 385098,
+    "sha256": "811e86d85e2431a387ed37bcdc6b9c1e1a6a69a90a7f0a5859772c9918fb7bfe"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT一步预测残差诊断 (82) (1).png",
+    "path": "Temp/总支付-LLT一步预测残差诊断 (82) (1).png",
+    "bytes": 387323,
+    "sha256": "9ea7e8e1f5f7f1e1794fd07f6870a507ad25d20887f8ba130a16e4391985a02e"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT一步预测残差诊断 (82).png",
+    "path": "Temp/总支付-LLT一步预测残差诊断 (82).png",
+    "bytes": 387323,
+    "sha256": "9ea7e8e1f5f7f1e1794fd07f6870a507ad25d20887f8ba130a16e4391985a02e"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT一步预测残差诊断.png",
+    "path": "Temp/总支付-LLT一步预测残差诊断.png",
+    "bytes": 351368,
+    "sha256": "04b411270a721137170ab12662917d4bbdda4af5d1a47796b46599b58b17d0d3"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT未观测成分分解 (1).png",
+    "path": "Temp/总支付-LLT未观测成分分解 (1).png",
+    "bytes": 220876,
+    "sha256": "b844a25603974eafb45f88e4f6650b7e94c6b8064a11ed2445811178b3cfc121"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT未观测成分分解 (35) (1).png",
+    "path": "Temp/总支付-LLT未观测成分分解 (35) (1).png",
+    "bytes": 246142,
+    "sha256": "711ef3e184f12dd1b34674547c390a10457a5dbaeed8d49d37682b1cc58b7aff"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT未观测成分分解 (35).png",
+    "path": "Temp/总支付-LLT未观测成分分解 (35).png",
+    "bytes": 246142,
+    "sha256": "711ef3e184f12dd1b34674547c390a10457a5dbaeed8d49d37682b1cc58b7aff"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT未观测成分分解 (84) (1).png",
+    "path": "Temp/总支付-LLT未观测成分分解 (84) (1).png",
+    "bytes": 243515,
+    "sha256": "ad6f5e034e9e16b296064c76165c4203e0cef5d33e9c1cc7fda05eb67d8a491f"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT未观测成分分解 (84).png",
+    "path": "Temp/总支付-LLT未观测成分分解 (84).png",
+    "bytes": 243515,
+    "sha256": "ad6f5e034e9e16b296064c76165c4203e0cef5d33e9c1cc7fda05eb67d8a491f"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT未观测成分分解.png",
+    "path": "Temp/总支付-LLT未观测成分分解.png",
+    "bytes": 220876,
+    "sha256": "b844a25603974eafb45f88e4f6650b7e94c6b8064a11ed2445811178b3cfc121"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT观测与样本内一步预测拟合对比 (1).png",
+    "path": "Temp/总支付-LLT观测与样本内一步预测拟合对比 (1).png",
+    "bytes": 169920,
+    "sha256": "b89483c7488f5e33b3899e4f92689610e328485404c97021beb07c0d238de373"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT观测与样本内一步预测拟合对比 (37) (1).png",
+    "path": "Temp/总支付-LLT观测与样本内一步预测拟合对比 (37) (1).png",
+    "bytes": 186701,
+    "sha256": "785e1c0739e119704bfc1485ebca957f7b94b88774515b5c2fc6b99ce8e98af8"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT观测与样本内一步预测拟合对比 (37).png",
+    "path": "Temp/总支付-LLT观测与样本内一步预测拟合对比 (37).png",
+    "bytes": 186701,
+    "sha256": "785e1c0739e119704bfc1485ebca957f7b94b88774515b5c2fc6b99ce8e98af8"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT观测与样本内一步预测拟合对比 (86) (1).png",
+    "path": "Temp/总支付-LLT观测与样本内一步预测拟合对比 (86) (1).png",
+    "bytes": 186397,
+    "sha256": "12d660c50c5ad9b85fd57d4e607a434240f0d882194f38f463b61bb42cfe0d3a"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT观测与样本内一步预测拟合对比 (86).png",
+    "path": "Temp/总支付-LLT观测与样本内一步预测拟合对比 (86).png",
+    "bytes": 186397,
+    "sha256": "12d660c50c5ad9b85fd57d4e607a434240f0d882194f38f463b61bb42cfe0d3a"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-LLT观测与样本内一步预测拟合对比.png",
+    "path": "Temp/总支付-LLT观测与样本内一步预测拟合对比.png",
+    "bytes": 169920,
+    "sha256": "b89483c7488f5e33b3899e4f92689610e328485404c97021beb07c0d238de373"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW一步预测残差诊断 (1).png",
+    "path": "Temp/总支付-RW一步预测残差诊断 (1).png",
+    "bytes": 363407,
+    "sha256": "1dbd3d5305c3b62ca975f9b2df46d9a4c506cb22c350fd319f89210da059b392"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW一步预测残差诊断 (39) (1).png",
+    "path": "Temp/总支付-RW一步预测残差诊断 (39) (1).png",
+    "bytes": 377879,
+    "sha256": "5e42e662d8442c9074fc83112b4f627bd6279781624be3b0805b1babbce6ae4d"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW一步预测残差诊断 (39).png",
+    "path": "Temp/总支付-RW一步预测残差诊断 (39).png",
+    "bytes": 377879,
+    "sha256": "5e42e662d8442c9074fc83112b4f627bd6279781624be3b0805b1babbce6ae4d"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW一步预测残差诊断 (88) (1).png",
+    "path": "Temp/总支付-RW一步预测残差诊断 (88) (1).png",
+    "bytes": 387766,
+    "sha256": "111ab55b2dc0051e6cbd586dbb47923f0be2fda039e15c4b4bbd38c3853a3011"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW一步预测残差诊断 (88).png",
+    "path": "Temp/总支付-RW一步预测残差诊断 (88).png",
+    "bytes": 387766,
+    "sha256": "111ab55b2dc0051e6cbd586dbb47923f0be2fda039e15c4b4bbd38c3853a3011"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW一步预测残差诊断.png",
+    "path": "Temp/总支付-RW一步预测残差诊断.png",
+    "bytes": 363407,
+    "sha256": "1dbd3d5305c3b62ca975f9b2df46d9a4c506cb22c350fd319f89210da059b392"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW未观测成分分解 (1).png",
+    "path": "Temp/总支付-RW未观测成分分解 (1).png",
+    "bytes": 210937,
+    "sha256": "0c07f1cb9d117b2cadf022a6a38d13ded9f3d679b4d4ad5e08c72b2503217f66"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW未观测成分分解 (41) (1).png",
+    "path": "Temp/总支付-RW未观测成分分解 (41) (1).png",
+    "bytes": 246817,
+    "sha256": "200b0b97fb2165a2da7ea37bf56d4dd6464781fad2178bb78825ad20e43b5554"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW未观测成分分解 (41).png",
+    "path": "Temp/总支付-RW未观测成分分解 (41).png",
+    "bytes": 246817,
+    "sha256": "200b0b97fb2165a2da7ea37bf56d4dd6464781fad2178bb78825ad20e43b5554"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW未观测成分分解 (90) (1).png",
+    "path": "Temp/总支付-RW未观测成分分解 (90) (1).png",
+    "bytes": 248854,
+    "sha256": "5d1be2536b26891ce92eca56e28f917774afdef69bc8b8d3a91e83dbdd6c7ef4"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW未观测成分分解 (90).png",
+    "path": "Temp/总支付-RW未观测成分分解 (90).png",
+    "bytes": 248854,
+    "sha256": "5d1be2536b26891ce92eca56e28f917774afdef69bc8b8d3a91e83dbdd6c7ef4"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW未观测成分分解.png",
+    "path": "Temp/总支付-RW未观测成分分解.png",
+    "bytes": 210937,
+    "sha256": "0c07f1cb9d117b2cadf022a6a38d13ded9f3d679b4d4ad5e08c72b2503217f66"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW观测与样本内一步预测拟合对比 (1).png",
+    "path": "Temp/总支付-RW观测与样本内一步预测拟合对比 (1).png",
+    "bytes": 162574,
+    "sha256": "a74f433e9a6c3454a1674dce9a333ea25fd97cb13063c422877757deab771aac"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW观测与样本内一步预测拟合对比 (43) (1).png",
+    "path": "Temp/总支付-RW观测与样本内一步预测拟合对比 (43) (1).png",
+    "bytes": 179461,
+    "sha256": "8f3be5d2a882a86116312f23535726a09c439592c068f4bd71bd4d77cabc998a"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW观测与样本内一步预测拟合对比 (43).png",
+    "path": "Temp/总支付-RW观测与样本内一步预测拟合对比 (43).png",
+    "bytes": 179461,
+    "sha256": "8f3be5d2a882a86116312f23535726a09c439592c068f4bd71bd4d77cabc998a"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW观测与样本内一步预测拟合对比 (92) (1).png",
+    "path": "Temp/总支付-RW观测与样本内一步预测拟合对比 (92) (1).png",
+    "bytes": 178881,
+    "sha256": "53a8d5cb514aebd1de793ec644102b42e2e8e917c7c757fb8c2944f7038e778b"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW观测与样本内一步预测拟合对比 (92).png",
+    "path": "Temp/总支付-RW观测与样本内一步预测拟合对比 (92).png",
+    "bytes": 178881,
+    "sha256": "53a8d5cb514aebd1de793ec644102b42e2e8e917c7c757fb8c2944f7038e778b"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付-RW观测与样本内一步预测拟合对比.png",
+    "path": "Temp/总支付-RW观测与样本内一步预测拟合对比.png",
+    "bytes": 162574,
+    "sha256": "a74f433e9a6c3454a1674dce9a333ea25fd97cb13063c422877757deab771aac"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付各模型滚动预测误差 (1).png",
+    "path": "Temp/总支付各模型滚动预测误差 (1).png",
+    "bytes": 217326,
+    "sha256": "d0583241005960e933ab70f476b61679164df92a6fe3b47f330529d99dfc98f3"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付各模型滚动预测误差.png",
+    "path": "Temp/总支付各模型滚动预测误差.png",
+    "bytes": 217326,
+    "sha256": "d0583241005960e933ab70f476b61679164df92a6fe3b47f330529d99dfc98f3"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付扩展窗口滚动预测对比 (1).png",
+    "path": "Temp/总支付扩展窗口滚动预测对比 (1).png",
+    "bytes": 224709,
+    "sha256": "dbd20f174c5b9f9743382eff6762297264f5cc0bab59bca93498b1ed2da9716b"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付扩展窗口滚动预测对比.png",
+    "path": "Temp/总支付扩展窗口滚动预测对比.png",
+    "bytes": 224709,
+    "sha256": "dbd20f174c5b9f9743382eff6762297264f5cc0bab59bca93498b1ed2da9716b"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付滚动预测误差指标比较 (1).png",
+    "path": "Temp/总支付滚动预测误差指标比较 (1).png",
+    "bytes": 76458,
+    "sha256": "1793539e4bbb759006a1f522c0998556f00b789d3bc1aca588d76f9fa1d49007"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\总支付滚动预测误差指标比较.png",
+    "path": "Temp/总支付滚动预测误差指标比较.png",
+    "bytes": 76458,
+    "sha256": "1793539e4bbb759006a1f522c0998556f00b789d3bc1aca588d76f9fa1d49007"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\自然周个人总支付与常规支付对比 (1).png",
+    "path": "Temp/自然周个人总支付与常规支付对比 (1).png",
+    "bytes": 171371,
+    "sha256": "c32c973507f0184f58f42292eb22b8477979013fbae39022b0a5a3ce4640ded7"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\自然周个人总支付与常规支付对比.png",
+    "path": "Temp/自然周个人总支付与常规支付对比.png",
+    "bytes": 171371,
+    "sha256": "c32c973507f0184f58f42292eb22b8477979013fbae39022b0a5a3ce4640ded7"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\自然周个人总支付训练期趋势 (1).png",
+    "path": "Temp/自然周个人总支付训练期趋势 (1).png",
+    "bytes": 126375,
+    "sha256": "c7e84ce34ee580c0a7d53fcea3d95a1668aa84703edb93810135c72ca0510e2e"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\自然周个人总支付训练期趋势.png",
+    "path": "Temp/自然周个人总支付训练期趋势.png",
+    "bytes": 126375,
+    "sha256": "c7e84ce34ee580c0a7d53fcea3d95a1668aa84703edb93810135c72ca0510e2e"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\自然周常规支付固定原点独立测试 (1).png",
+    "path": "Temp/自然周常规支付固定原点独立测试 (1).png",
+    "bytes": 144735,
+    "sha256": "10d1630b921a67cbe48ff395bf0d8408e8ead2c74d04f7ad9ebd871e5f196254"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\自然周常规支付固定原点独立测试.png",
+    "path": "Temp/自然周常规支付固定原点独立测试.png",
+    "bytes": 144735,
+    "sha256": "10d1630b921a67cbe48ff395bf0d8408e8ead2c74d04f7ad9ebd871e5f196254"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\自然周常规支付扩展窗口滚动预测 (1).png",
+    "path": "Temp/自然周常规支付扩展窗口滚动预测 (1).png",
+    "bytes": 249859,
+    "sha256": "9355e71662a475b0a19adf88f088e241958876a4f1c8e2e92ab69d9ca0481700"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\自然周常规支付扩展窗口滚动预测.png",
+    "path": "Temp/自然周常规支付扩展窗口滚动预测.png",
+    "bytes": 249859,
+    "sha256": "9355e71662a475b0a19adf88f088e241958876a4f1c8e2e92ab69d9ca0481700"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\自然周总支付固定原点独立测试 (1).png",
+    "path": "Temp/自然周总支付固定原点独立测试 (1).png",
+    "bytes": 137971,
+    "sha256": "fde3401af907c6132a050201de9c9bd285cdb08f7d17fee0a6e7cea811dd1a1e"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\自然周总支付固定原点独立测试.png",
+    "path": "Temp/自然周总支付固定原点独立测试.png",
+    "bytes": 137971,
+    "sha256": "fde3401af907c6132a050201de9c9bd285cdb08f7d17fee0a6e7cea811dd1a1e"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\自然周总支付扩展窗口滚动预测 (1).png",
+    "path": "Temp/自然周总支付扩展窗口滚动预测 (1).png",
+    "bytes": 224597,
+    "sha256": "e3fe0468fd67060bb14165153a2c98bf690c27b4398be8249cf4f9c13dc8acd7"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\自然周总支付扩展窗口滚动预测.png",
+    "path": "Temp/自然周总支付扩展窗口滚动预测.png",
+    "bytes": 224597,
+    "sha256": "e3fe0468fd67060bb14165153a2c98bf690c27b4398be8249cf4f9c13dc8acd7"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天 (1).xlsx",
+    "path": "Temp/连续七天 (1).xlsx",
+    "bytes": 176831,
+    "sha256": "842f620ac722dbf920a6bb96ff90fad61cb39540ceb626d789bca16df1d02ae1"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天.xlsx",
+    "path": "Temp/连续七天.xlsx",
+    "bytes": 176831,
+    "sha256": "842f620ac722dbf920a6bb96ff90fad61cb39540ceb626d789bca16df1d02ae1"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天个人总支付与常规支付对比 (1).png",
+    "path": "Temp/连续七天个人总支付与常规支付对比 (1).png",
+    "bytes": 171319,
+    "sha256": "05364bf9bed5508d99c2e09498d23f5022b21429024d9f550c5be26beac00208"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天个人总支付与常规支付对比.png",
+    "path": "Temp/连续七天个人总支付与常规支付对比.png",
+    "bytes": 171319,
+    "sha256": "05364bf9bed5508d99c2e09498d23f5022b21429024d9f550c5be26beac00208"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天个人总支付训练期趋势 (1).png",
+    "path": "Temp/连续七天个人总支付训练期趋势 (1).png",
+    "bytes": 127186,
+    "sha256": "a6f8042a01edb12feb062a57c3aac89e6899672458d76b86a7bad95084151b56"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天个人总支付训练期趋势.png",
+    "path": "Temp/连续七天个人总支付训练期趋势.png",
+    "bytes": 127186,
+    "sha256": "a6f8042a01edb12feb062a57c3aac89e6899672458d76b86a7bad95084151b56"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天常规支付固定原点独立测试 (1).png",
+    "path": "Temp/连续七天常规支付固定原点独立测试 (1).png",
+    "bytes": 147605,
+    "sha256": "04e195db2149646c953010b5e8697b682e70dedebd1ba52f328f1b2d895232d3"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天常规支付固定原点独立测试.png",
+    "path": "Temp/连续七天常规支付固定原点独立测试.png",
+    "bytes": 147605,
+    "sha256": "04e195db2149646c953010b5e8697b682e70dedebd1ba52f328f1b2d895232d3"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天常规支付扩展窗口滚动预测 (1).png",
+    "path": "Temp/连续七天常规支付扩展窗口滚动预测 (1).png",
+    "bytes": 248334,
+    "sha256": "e1efdd568696e9615b92b14e222b6124ca48407567a36ca22dce40ca4fe1e8cb"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天常规支付扩展窗口滚动预测.png",
+    "path": "Temp/连续七天常规支付扩展窗口滚动预测.png",
+    "bytes": 248334,
+    "sha256": "e1efdd568696e9615b92b14e222b6124ca48407567a36ca22dce40ca4fe1e8cb"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天总支付固定原点独立测试 (1).png",
+    "path": "Temp/连续七天总支付固定原点独立测试 (1).png",
+    "bytes": 144992,
+    "sha256": "6a2735cab35188a9815429e73911a4e125a8b2079a81d3327a32c5c0056f09d0"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天总支付固定原点独立测试.png",
+    "path": "Temp/连续七天总支付固定原点独立测试.png",
+    "bytes": 144992,
+    "sha256": "6a2735cab35188a9815429e73911a4e125a8b2079a81d3327a32c5c0056f09d0"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天总支付扩展窗口滚动预测 (1).png",
+    "path": "Temp/连续七天总支付扩展窗口滚动预测 (1).png",
+    "bytes": 223897,
+    "sha256": "b1527b1ec4197bb9085059ac86c0403294ae1ed724a85ba0ef84561a66d47a15"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\连续七天总支付扩展窗口滚动预测.png",
+    "path": "Temp/连续七天总支付扩展窗口滚动预测.png",
+    "bytes": 223897,
+    "sha256": "b1527b1ec4197bb9085059ac86c0403294ae1ed724a85ba0ef84561a66d47a15"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\codex-file-preview-AuSdkr\\微信支付账单流水文件(20250901-20260901)_20261118160810.xlsx",
+    "path": "Temp/codex-file-preview-AuSdkr/微信支付账单流水文件(20250901-20260901)_20261118160810.xlsx",
+    "bytes": 83423,
+    "sha256": "a864955d1ecda6a9d2a1dcc192b4dcb817ba5a6af90ae1ebc491b57b72f9eb44"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\codex-file-preview-kiOa3B\\微信支付账单流水文件(20250901-20260901)_20261118160810.xlsx",
+    "path": "Temp/codex-file-preview-kiOa3B/微信支付账单流水文件(20250901-20260901)_20261118160810.xlsx",
+    "bytes": 83423,
+    "sha256": "a864955d1ecda6a9d2a1dcc192b4dcb817ba5a6af90ae1ebc491b57b72f9eb44"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\codex-file-preview-NOFNrf\\支付宝交易明细(20250901-20260831).csv",
+    "path": "Temp/codex-file-preview-NOFNrf/支付宝交易明细(20250901-20260831).csv",
+    "bytes": 193405,
+    "sha256": "5430ba62c4d1c1ec4e6e5d0362556292ef88bc3f8d94221d612973be6b0bc1b3"
+  },
+  {
+    "source": "C:\\Users\\aerith\\AppData\\Local\\Temp\\codex-file-preview-z9Ws5h\\支付宝交易明细(20250901-20260831).csv",
+    "path": "Temp/codex-file-preview-z9Ws5h/支付宝交易明细(20250901-20260831).csv",
+    "bytes": 193405,
+    "sha256": "5430ba62c4d1c1ec4e6e5d0362556292ef88bc3f8d94221d612973be6b0bc1b3"
+  }
+]
