@@ -1,0 +1,12 @@
+{
+  "MATLAB": "26.1.0.3346908 (R2026a) Update 5",
+  "StartedFromGitCommit": "1017cd3757c1e6fe592df24279d25ab9eadadf79",
+  "EstimationSeconds": 72.6684782,
+  "FitCount": 180,
+  "Protocol": "training_30fold_expanding_one_step",
+  "Method": "ECOTOOL CML raw scale",
+  "FinishedAt": "2026-11-24 12:27:58",
+  "ModelETSPath": "C:\\Users\\86139\\AppData\\Roaming\\MathWorks\\MATLAB Add-Ons\\Toolboxes\\ECOTOOL\\modelETS.m",
+  "AdapterPath": "D:\\Code\\MATLAB\\个人支出时间序列分析\\rolling_final4\\src\\ets\\fit_ets_final4.m",
+  "WindowAdapterPath": "D:\\Code\\MATLAB\\个人支出时间序列分析\\rolling_final4\\src\\ets\\textoutputWINDOW.m"
+}

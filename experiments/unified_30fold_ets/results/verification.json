@@ -1,0 +1,62 @@
+{
+  "PredictionRows": 450,
+  "Groups": 15,
+  "RecordsPerGroup": 30,
+  "NewETSFits": 180,
+  "ReusedSSMUCRows": 180,
+  "ReusedMeanRows": 90,
+  "SelectedUCFitExitFlagsPositive": 180,
+  "Origins": [
+    78,
+    107
+  ],
+  "Targets": [
+    79,
+    108
+  ],
+  "TargetDates": [
+    "2026-03-02",
+    "2026-09-21"
+  ],
+  "Duplicates": 0,
+  "MissingOrNonfinite": 0,
+  "MetricsIndependentMaxDifference": 5.002220859751105e-12,
+  "DataAudit": [
+    {
+      "Person": "A",
+      "Weeks": 112,
+      "TrainingWeeks": 108,
+      "DuplicateDates": 0,
+      "DuplicateRows": 0,
+      "LegacyDuplicateWeekField": -108,
+      "SSMFull108MaxDifference": 0,
+      "DataSHA256": "7446eb7bdbaa83db4dcdefaeee4c094bdf511c2e03fb9bcd52c75b8d98e272af"
+    },
+    {
+      "Person": "B",
+      "Weeks": 112,
+      "TrainingWeeks": 108,
+      "DuplicateDates": 0,
+      "DuplicateRows": 0,
+      "LegacyDuplicateWeekField": -108,
+      "SSMFull108MaxDifference": 0,
+      "DataSHA256": "6cada3fb4eb53e31ab23c43eaba13f288a4fdcf8501c97c0c7da4f7c5cda8c9c"
+    },
+    {
+      "Person": "C",
+      "Weeks": 112,
+      "TrainingWeeks": 108,
+      "DuplicateDates": 0,
+      "DuplicateRows": 0,
+      "LegacyDuplicateWeekField": -108,
+      "SSMFull108MaxDifference": 0,
+      "DataSHA256": "26596b28f3ff9ddb854f4a9a0ab1bd06998ac77b3ae5bfe3f0e0845b64374527"
+    }
+  ],
+  "KnownLegacyMetadataError": "duplicate week field -108 caused by numel(matrix), corrected independently with row/date counts; original files untouched",
+  "ExistingFilesUnchanged": 407,
+  "FinalFourReestimated": false,
+  "UCReestimated": false,
+  "MeanReestimated": false,
+  "SignificanceTestsExecuted": false
+}
